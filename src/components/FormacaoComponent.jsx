@@ -10,6 +10,12 @@ class FormacaoComponent extends Component {
         }
     }
 
+    componentDidMount(){
+        FormacaoService.getFormacao().then((res) => {
+            this.setState({formacao : res.data})
+        });
+    }
+
     render() {
         return (
             <div>
