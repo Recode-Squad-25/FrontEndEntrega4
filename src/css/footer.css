@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2? family= Castoro & family= Roboto+Condensed:wght@300 & display=swap');
+
+/************************* CORES ***********************/
+
+:root {
+  --branco: #fff;
+  --preto: rgba(#255,255,255,0);
+  --cinzaclaro: #f4f4f4;
+  --cinza: #ccd1d9;
+  --cinzaescuro: #666666; 
+  --dark: #033,37,41;
+  --cor-primaria: #F26D3D;
+  --preto-hover: #242221;
+  --pretoopaco: rgba(0,0,0,0.7);
+  --cor-secundaria:#4B68BF;
+  --cor-secundaria2: #F28B30;
+  --cor-secudaria3:#F2C230; 
+  --verde: green;
+
+}
+
+.body {
+  font-family: 'Roboto Condensed' sans-serif !important;
+}
+
+.footer {
+    background: var(--preto-hover);
+    color: var(--cinzaescuro);
+    padding: 3rem;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: var(--cinzaescuro);
+  }
+  
+  .footer a:hover {
+    text-decoration: none;
+    color: var(--cor-secundaria2);
+    cursor: pointer;
+  }
+  
+  .footer p {
+    margin-bottom: 0;
+  
+  }

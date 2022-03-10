@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2? family= Castoro & family= Roboto+Condensed:wght@300 & display=swap');
+
+/************************* CORES ***********************/
+
+:root {
+  --branco: #fff;
+  --preto: rgba(#255,255,255,0);
+  --cinzaclaro: #f4f4f4;
+  --cinza: #ccd1d9;
+  --cinzaescuro: #666666; 
+  --dark: #033,37,41;
+  --cor-primaria: #F26D3D;
+  --preto-hover: #242221;
+  --pretoopaco: rgba(0,0,0,0.7);
+  --cor-secundaria:#4B68BF;
+  --cor-secundaria2: #F28B30;
+  --cor-secudaria3:#F2C230; 
+  --verde: green;
+
+}
+
+.body {
+  font-family: 'Roboto Condensed' sans-serif !important;
+}
+
+.contato {
+    background: var(--preto-hover);
+    padding: 3rem 0;
+  }
+ 
+  .contato h1 {
+    color: var(--cor-secundaria2);
+    padding: 1.3rem 0;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+ 
+  .contato p {
+    color: var(--cinzaclaro);
+    font-size: 1.2rem;
+  }
+ 
+  .contato input, .contato textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: none;
+    resize: none;
+    border: 0;
+    border-bottom: 0.125rem solid var(--cinzaescuro);
+    border-radius: 0;
+    color: var(--cinza);
+    outline: 0 !important;
+    box-shadow: none !important; 
+    margin-bottom: 1rem;
+    padding-left: 0 !important;
+  }
+ 
+ .contato .container {
+   padding: 4rem 0;
+ }
+ 
+ .contato input:focus, .contato textarea:focus {
+   background: transparent;
+   color: var(--cor-secundaria2);
+   border-bottom: 0.125rem solid var(--cinzaescuro);
+ }
+ 
+ .contato textarea {
+   height: 12.3rem !important; 
+ }
+ 
+ .btn-contato {
+   border: 1px solid var(--cor-secundaria2);
+   text-transform: uppercase;
+   border-radius: 0;
+   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+   color: var(--branco);
+   margin: 2rem;
+ }
+ 
+ .btn-contato:hover {
+   text-decoration: none;
+   background-color: var(--cor-secundaria2);
+   color: var(--branco);
+   transition:  .2s ease-in-out;
+ }
+ 
+ .contact-btn {
+   margin: 1rem 0 0 0;
+   width: 100%;
+   background: none;
+ }
+ 
+ .line {
+   position: relative;
+   top: -0.8rem;
+   width: 0;
+   height: 0.125rem;
+   background: var(--cor-secundaria2);
+   display: inline-block;
+ }
+ 
+ input:focus+.line, textarea:focus+.line {
+   width: 100%;
+   transition: width 0.5s ease-in-out;
+ }
+ 
+ input.form-control {
+   margin: -0.3rem 0;
+ }
+ 
+ textarea.form-control {
+   margin: -0.3rem 0;
+ }
+ 
+ @media (max-width:768px) {
+   
+   .contato {
+     overflow-x: hidden;
+   }
+   
+   .contato .container {
+     padding: 0 1rem;
+   }
+ 
+   .contato p {
+     padding: 0 0.4rem;
+   }
+ }
+ 
+ /***************************** AJUSTES BACKEND **********************************/
+ 
+ .error-message {
+   color: var(--branco);
+   background: var(--cor-secundaria2);
+   text-align: left;
+ 
+ }
+ 
+ .success-message {
+   font-weight: 500;
+   color: var(--verde);
+ }
+ 
