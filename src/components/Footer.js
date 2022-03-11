@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
                     <div className='col-lg-3 col-md-2 col-sm-6'>
                         <div className='row'>
-                            
+
                         </div>
                     </div>
                     <div className='col-lg-5 col-md-5 col-sm-6 align-items-center'>
@@ -65,13 +65,13 @@ const Footer = () => {
                             </LinkedinShareButton>
                         </div>
                         <p className='pt-3 text-center'>Copyright&copy;
-                        {new Date().getFullYear()}&nbsp;Brasil | Todos os Direitos Reservados
+                            {new Date().getFullYear()}&nbsp;Brasil | Todos os Direitos Reservados
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
