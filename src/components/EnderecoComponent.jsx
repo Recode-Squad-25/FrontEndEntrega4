@@ -18,7 +18,7 @@ class EnderecoComponent extends Component {
     render() {
         return (
             <div>
-                <h1 className="text-center">Lista Curriculos</h1>
+                <h1 className="text-center">Lista Endereços</h1>
                  <table className="table table-striped">
                      <thead>
                          <tr>

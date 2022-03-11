@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const FORMACAO_REST_API_URL = 'https://colore-back-end.herokuapp.com/Endereco'
+const ENDERECO_REST_API_URL = 'https://colore-back-end.herokuapp.com/Endereco'
 
 class EnderecoService {
     getEndereco(){
-        axios.get(FORMACAO_REST_API_URL);
+        axios.get(ENDERECO_REST_API_URL);
     }
 }
 

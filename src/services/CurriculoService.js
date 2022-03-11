@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const FORMACAO_REST_API_URL = 'https://colore-back-end.herokuapp.com/Curriculo'
+const CURRICULO_REST_API_URL = 'https://colore-back-end.herokuapp.com/Curriculo'
 
 class CurriculoService {
     getCurriculo(){
-        axios.get(FORMACAO_REST_API_URL);
+        axios.get(CURRICULO_REST_API_URL);
     }
 }
 
