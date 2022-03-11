@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Senha } from '../pages/Senha/index'
 import { Login } from '../pages/Login/index'
 import { Cadastro } from '../pages/Cadastro/index'
-import { Contato } from '../pages/Contato/index'
-import { Avaliacoes } from '../pages/Avaliacoes/index'
-import { Vaga } from '../components/VagaComponent'
-import { Inicio } from '../components/InicioComponent'
-import { Empresa } from '../components/EmpresaComponent'
+import  Contato  from '../pages/Contato/index'
+import  Avaliacoes  from '../pages/Avaliacoes/index'
+import  Vaga  from '../components/VagaComponent'
+import  Inicio  from '../components/InicioComponent'
+import  Empresa  from '../components/EmpresaComponent'
 
-export const AppRouter = () => {
+const AppRouter = () => {
     return (
         <Router>
             <Routes>
@@ -25,3 +25,5 @@ export const AppRouter = () => {
         </Router>
     );
 };
+
+export default AppRouter;
