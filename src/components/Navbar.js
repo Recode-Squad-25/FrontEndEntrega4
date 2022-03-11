@@ -16,12 +16,15 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto">
-                    <li className="nav-item">
+                        <li className="nav-item">
+                            <NavLink to='/vagas' className="nav-link" href="/#">Vagas</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink to='/avaliacoes' className="nav-link" href="/#">Avaliações</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to='/contato' className="nav-link" href="/#">Contato</NavLink>
-                        </li>
+                        </li>                        
                     </ul>
                 </div>
             </div>
