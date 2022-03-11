@@ -4,7 +4,6 @@ import '../styles/navbar.css'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-/* eslint-disable jsx-a11y/anchor-is-valid */
 
 const Navbar = () => {
     return (
@@ -17,19 +16,19 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
-                            <NavLink to='/login' className="nav-link" href="/#">Login</NavLink>
+                            <NavLink to='/login' className="nav-link">Login</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/vagas' className="nav-link" href="/#">Vagas</NavLink>
+                            <NavLink to='/vagas' className="nav-link">Vagas</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/empresas' className="nav-link" href="/#">Empresas</NavLink>
+                            <NavLink to='/empresas' className="nav-link">Empresas</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/avaliacoes' className="nav-link" href="/#">Avaliações</NavLink>
+                            <NavLink to='/avaliacoes' className="nav-link">Avaliações</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to='/contato' className="nav-link" href="/#">Contato</NavLink>
+                            <NavLink to='/contato' className="nav-link">Contato</NavLink>
                         </li>                        
                     </ul>
                 </div>
