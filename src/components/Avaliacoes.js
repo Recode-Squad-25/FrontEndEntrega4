@@ -1,6 +1,7 @@
 import React from 'react'
 import CarouselAvaliacoes from './CarouselAvaliacoes'
 import '../css/avaliacoes.css'
+
 const Avaliacoes = () => {
   return (
     <div id='avaliacoes' className='avaliacoes'>

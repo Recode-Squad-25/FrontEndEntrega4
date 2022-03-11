@@ -7,6 +7,7 @@ import Contato from './components/Contato'
 import Avaliacoes from './components/Avaliacoes'
 import ScrollTop from './components/ScrollTop'
 import VagaComponent from './components/VagaComponent'
+import InicioComponent from './components/InicioComponent'
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <ScrollTop/>
         <Navbar />
         <Routes>
+          <Route path="/" element={<InicioComponent/>} />
           <Route path="/contato" element={<Contato/>} />
           <Route path="/avaliacoes" element={<Avaliacoes/>} />
           <Route path="/formacao" element={<VagaComponent/>} />
