@@ -1,6 +1,6 @@
 import React from 'react'
 import CarouselAvaliacoes from '../../components/CarouselAvaliacoes'
-import '../styles/avaliacoes.css'
+import '../../styles/avaliacoes.css'
 
 const Avaliacoes = () => {
   return (

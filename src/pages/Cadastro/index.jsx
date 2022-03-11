@@ -3,6 +3,7 @@ import logo from '../../images/assets/icon_mobile.png'
 import { Link } from 'react-router-dom'
 import { Layouts } from '../../components/layouts/index'
 import { useState } from 'react'
+import '../../styles/login.css'
 
 export const Cadastro = () => {
     const [name, setName] = useState("");

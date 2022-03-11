@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useForm } from 'react-hook-form'
-import '../styles/contato.css'
+import '../../styles/contato.css'
 
 const Contato = () => {
     const [successMessage, setSuccessMessage] = useState("");
