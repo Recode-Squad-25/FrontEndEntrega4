@@ -8,6 +8,7 @@ import Avaliacoes from './components/Avaliacoes'
 import ScrollTop from './components/ScrollTop'
 import VagaComponent from './components/VagaComponent'
 import InicioComponent from './components/InicioComponent'
+import EmpresaComponent from './components/EmpresaComponent'
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 function App() {
@@ -17,11 +18,12 @@ function App() {
       <Router>
       <ScrollTop/>
         <Navbar />
-        <Routes>
+        <Routes>        
           <Route path="/" element={<InicioComponent/>} />
+          <Route path="/vaga" element={<VagaComponent/>} />
+          <Route path="/empresa" element={<EmpresaComponent/>} />
           <Route path="/contato" element={<Contato/>} />
-          <Route path="/avaliacoes" element={<Avaliacoes/>} />
-          <Route path="/formacao" element={<VagaComponent/>} />
+          <Route path="/avaliacoes" element={<Avaliacoes/>} />          
         </Routes>
       </Router>
       <Footer />
