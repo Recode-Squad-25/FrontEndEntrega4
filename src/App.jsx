@@ -8,8 +8,8 @@ export const App = () => {
   return (
     <>
       <AppRouter>
-        <ScrollTop />
         <Navbar />
+        <ScrollTop />
       </AppRouter>
     </>
   );
