@@ -2,6 +2,7 @@
 import { Layouts } from '../../components/layouts/index'
 import { Link } from "react-router-dom"
 import { useState } from "react";
+import '../../styles/login.css'
 
 import logo from '../../images/assets/icon_mobile.png'
 
