@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import CarouselInicio from './CarouselInicioComponent'
 import VagasInicio from './VagasInicioComponent'
-import '../css/inicio.css'
+import '../styles/inicio.css'
 
 class InicioComponent extends Component {
     render() {
         return (
             <div className='inicio'>
-                <h1></h1>
+                <h1>olá</h1>
                 <div className='container'>
                     <div className='inicio-content'>
                         <CarouselInicio/>

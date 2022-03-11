@@ -3,7 +3,7 @@ import { Layouts } from '../../components/layouts/index'
 import { Link } from "react-router-dom"
 import { useState } from "react";
 
-import logo from '../../assets/icon_mobile.png'
+import logo from '../../images/assets/icon_mobile.png'
 
 export const Login = () => {
   const [email, setEmail] = useState("");

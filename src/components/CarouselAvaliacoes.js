@@ -5,7 +5,7 @@ import avatar4 from '../images/avatares/avatar4.png'
 import avatar1 from '../images/avatares/avatar1.png'
 import avatar2 from '../images/avatares/avatar2.png'
 import avatar3 from '../images/avatares/avatar3.png'
-import '../css/avaliacoes.css'
+import '../styles/avaliacoes.css'
 
 const CarouselAvaliacoes = () => {
     return (

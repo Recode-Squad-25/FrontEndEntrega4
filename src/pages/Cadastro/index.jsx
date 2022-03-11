@@ -1,5 +1,5 @@
 /*PÁGINA CADASTRO COMPLETA*/
-import logo from '../../assets/icon_mobile.png'
+import logo from '../../images/assets/icon_mobile.png'
 import { Link } from 'react-router-dom'
 import { Layouts } from '../../components/layouts/index'
 import { useState } from 'react'

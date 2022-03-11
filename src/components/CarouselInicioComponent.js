@@ -4,7 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import slide1 from '../images/index/0.png'
 import slide2 from '../images/index/1.png'
 import slide3 from '../images/index/2.png'
-import '../css/inicio.css'
+import '../styles/inicio.css'
 
 const CarouselInicio = () => {
     return (
