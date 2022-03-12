@@ -8,10 +8,13 @@ import  Avaliacoes  from '../pages/Avaliacoes/index'
 import  Vaga  from '../components/VagaComponent'
 import  Inicio  from '../components/InicioComponent'
 import  Empresa  from '../components/EmpresaComponent'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const AppRouter = () => {
     return (
         <Router>
+        <Navbar/>
             <Routes>
                 <Route exact path="/" element={<Inicio />} />
                 <Route path="/login" element={<Login />} />
@@ -22,6 +25,7 @@ const AppRouter = () => {
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/avaliacoes" element={<Avaliacoes />} />
             </Routes>
+            <Footer/>
         </Router>
         
     );
