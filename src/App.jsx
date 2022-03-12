@@ -7,8 +7,11 @@ import ScrollTop from './components/ScrollTop'
 export const App = () => {
   return (
     <>
-      <AppRouter/>
+      <AppRouter>
       <ScrollTop/>
+      </AppRouter>
+      
+      
     </>
   );
 };
