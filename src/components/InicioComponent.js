@@ -6,15 +6,18 @@ import '../styles/inicio.css'
 class InicioComponent extends Component {
     render() {
         return (
-            <div className='inicio'>
-                <h1>olá</h1>
-                <div className='container'>
+
+            <div className='container-fluid index'>
+                <div className='container index-text'>
                     <div className='inicio-content'>
-                        <CarouselInicio/>
+                        <CarouselInicio />
+                    </div>
+                    <div className='index-text text-center text-white'>
+                        <h4>Encontre aqui a vaga que tanto deseja</h4>
                     </div>
                 </div>
-                <VagasInicio/>
-            </div>           
+                <VagasInicio />
+            </div>
         );
     }
 }

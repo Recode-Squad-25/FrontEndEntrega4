@@ -42,5 +42,15 @@
   
   .footer p {
     margin-bottom: 0;
-  
   }
+  .fot-icon {
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: -1;
+  }
+  
+  .fot-icon:hover {
+  transform:scale(1.25, 1.25);
+}
+  .fot-icon:hover::after {
+  opacity: 1;
+}

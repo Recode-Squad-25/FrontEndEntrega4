@@ -1,88 +1,43 @@
-@import url('https://fonts.googleapis.com/css2? family= Castoro & family= Roboto+Condensed:wght@300 & display=swap');
-
-/************************* CORES ***********************/
-
-:root {
-  --branco: #fff;
-  --preto: rgba(#255,255,255,0);
-  --cinzaclaro: #f4f4f4;
-  --cinza: #ccd1d9;
-  --cinzaescuro: #666666; 
-  --dark: #033,37,41;
-  --cor-primaria: #F26D3D;
-  --preto-hover: #242221;
-  --pretoopaco: rgba(0,0,0,0.7);
-  --cor-secundaria:#4B68BF;
-  --cor-secundaria2: #F28B30;
-  --cor-secudaria3:#F2C230; 
-  --verde: green;
-
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.carouselindex {
+  padding: 77px 55px 33px 55px;
+  padding-bottom: 8%;
+}
+.carouselindex-img img {
+  border-radius: 20px;
+}
+.index {
+  width: 100%;
+  background-image: url(../images/assets/Fundo_arte.png);
 }
 
-.body {
-  font-family: 'Roboto Condensed' sans-serif !important;
+.index-text h4 {
+  padding-bottom: 50px;
+  color: white; text-shadow: black 0.1em 0.1em 0.2em
 }
-
-.inicio {
-    background-image: url(../images/geral/bg.jpg);
-    background-size: cover;
-    background-color: var(--preto-hover);
-    text-align: center;
-    padding-bottom: 4rem;
-    margin-bottom: 0;
-    width: 100%;
+.vagas-filho {
+  justify-content: space-around;
+}
+  .vagas-neto img {
+    width:150px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+  }
+  .vagas-neto img:hover {
+    transform:scale(1.25, 1.25);
+  }
+  .vagas-neto img:hover::after {
+    opacity: 1;
+  }
+  .vagas-neto-figtext {
+    padding-bottom: 15px;
+    font-size: 17px;
+    color: white; text-shadow: black 0.1em 0.1em 0.3em
   }
   
-  .inicio h1 {
-    color: var(--cor-secundaria2);
-    font-weight: 200;
-    padding: 3rem 0;
-    text-transform: uppercase;
-  }
-  
-  .inicio-content {
-    text-align: center;
-    max-width: 53.125rem;
-    margin: 0 auto 2rem auto;
-    background: var(--pretoopaco);
-  }
-  
-  .meucarousel {
-    color: var(--branco);
-    background: transparent;
-    margin-top: -6%;
-    width: 54%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 6%;
-    padding-bottom: 8%;
-    padding-left: 5%;
-    padding-right: 5%;
-    height: 17.875rem;
-  }
-  
-  .meucarousel h3 {
-    color: var(--cor-secundaria2);
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  
-  .meucarousel p {
-    color: var(--cinza);
-  }
-  
-  .carousel .slide {
-    background: transparent !important;
-    height: 100% !important;
-    padding-top: 2rem;
-  }
-  
-  .carousel-root {
-    margin: auto !important;
-    margin-top: 3% !important;
-  }
-  
-  .inicio .slide img {
-    width: 40rem !important;
-    border-radius: 5%;
-  }
