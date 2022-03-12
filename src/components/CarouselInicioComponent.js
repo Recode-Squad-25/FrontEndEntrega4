@@ -8,24 +8,25 @@ import '../styles/inicio.css'
 
 const CarouselInicio = () => {
     return (
-        <Carousel
-            showArrows={true}
-            infiniteLoop={true}
-            showThumbs={false}
-            showStatus={false}
-            autoPlay={true}
-            interval={3000}
-        >
-            <>
-                <img src={slide1} alt='1' />
-            </>
-            <>
-                <img src={slide2} alt='2' />
-            </>
-            <>
-                <img src={slide3} alt='3' />
-            </>
-        </Carousel>
+            <Carousel className='carouselindex'
+                showArrows={true}
+                infiniteLoop={true}
+                showThumbs={false}
+                showStatus={false}
+                autoPlay={true}
+                interval={3000}
+            >
+
+                <div className='carouselindex-img'>
+                    <img src={slide1} alt='1' />
+                </div>
+                <div className='carouselindex-img'>
+                    <img src={slide2} alt='2' />
+                </div>
+                <div className='carouselindex-img'>
+                    <img src={slide3} alt='3' />
+                </div>
+            </Carousel>
     )
 }
 
