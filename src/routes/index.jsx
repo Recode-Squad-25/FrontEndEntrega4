@@ -10,6 +10,7 @@ import  Inicio  from '../components/InicioComponent'
 import  Empresa  from '../components/EmpresaComponent'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Sobre from '../pages/Sobre/index'
 
 const AppRouter = () => {
     return (
@@ -24,6 +25,7 @@ const AppRouter = () => {
                 <Route path="/empresas" element={<Empresa />} />
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/avaliacoes" element={<Avaliacoes />} />
+                <Route path="/sobre" element={<Sobre />} />
             </Routes>
             <Footer/>
         </Router>
