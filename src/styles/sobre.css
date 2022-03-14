@@ -1,0 +1,19 @@
+.social {
+    border: solid thin #ced4da;
+}
+
+    .social:hover {
+        background-image: linear-gradient(to bottom right, #EA3C4A, #FEA432, #FFE431);
+        box-shadow: 5px 5px 5px #495057;
+    }
+
+
+
+.icon {
+    width:40px;
+    border-radius: 50%;
+}
+
+    .icon:hover {
+        background-image: linear-gradient(to bottom right, #00FFFF, #6725AE);
+    }
