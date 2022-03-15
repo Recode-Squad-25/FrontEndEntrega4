@@ -6,6 +6,12 @@ import missao from '../../images/sobre/Team goals-amico.svg'
 import visaoEValores from '../../images/sobre/Business Plan-amico.svg'
 
 import Ana from '../../images/sobre/Ana.png'
+import Joao from '../../images/sobre/Joao.png'
+import Juliana from '../../images/sobre/Juliana.png'
+import Leonardo from '../../images/sobre/Leonardo.png'
+import Luiz from '../../images/sobre/Luiz.png'
+import Wesley from '../../images/sobre/Wesley.png'
+
 
 import Card from '../../components/SobreCard'
 
@@ -57,18 +63,28 @@ const Sobre = () => {
             <div className="text-center mt-5">
                 <h2>Nosso Time</h2>
             </div>
-            <div className="d-block d-sm-flex text-center">
+
+            <div className="d-block d-sm-flex">
+                {/*card 1*/}
                 <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
-                <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
+                {/*card 2*/}
+                <Card FotoPessoa={Joao} NomePessoa="João Victor Santos" funcao="Front-End" Linkedin="http://linkedin.com/in/ssjoao2021" Github="https://github.com/devictor4" Instagram="https://www.instagram.com/victorr071/" />
             </div>
-            <div className="d-block d-sm-flex text-center">
-                <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
-                <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
+
+            <div className="d-block d-sm-flex justify-items-around">
+                {/*card 3*/}
+                <Card FotoPessoa={Juliana} NomePessoa="Juliana Mesquita" funcao="Back-End" Linkedin="https://www.linkedin.com/in/juliana-maria-de-sousa-mesquita-1b86a0189/" Github="https://github.com/JulianaMariaSousaMesquita" Instagram="https://www.instagram.com/julianamesquitaoficial/" />
+                {/*card 4*/}
+                <Card FotoPessoa={Leonardo} NomePessoa="Leonardo Mendonça" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/leonardoalvesm/" Github="https://github.com/LeonardFLY" Instagram="https://www.instagram.com/leonard_fly/" />
             </div>
-            <div className="d-block d-sm-flex text-center">
-                <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
-                <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
+
+            <div className="d-block d-sm-flex justify-items-around">
+                {/*card 5*/}
+                <Card FotoPessoa={Luiz} NomePessoa="Luiz Souza" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/luiz-freitas-28995322a/" Github="https://github.com/Luizfre"/>
+                {/*card 6*/}
+                <Card FotoPessoa={Wesley} NomePessoa="Wesley de Azevedo" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/wesley-azevedo-83aa311b1" Github="https://github.com/wesleyazevedo957" Instagram="https://www.instagram.com/wesley.azevedo.rj/" />
             </div>
+
         </div>
     );
 }
