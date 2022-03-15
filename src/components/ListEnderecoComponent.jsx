@@ -7,13 +7,33 @@ class EnderecoComponent extends Component {
         this.state = {
             endereco:[]
         }
+        this.addEndereco = this.addEndereco.bind(this);
+        this.editEndereco = this.editEndereco.bind(this);
+        this.deleteEndereco = this.deleteEndereco.bind(this);
+    }
+
+    deleteEndereco(id){
+        EnderecoService.deleteEndereco(id).then( res => {
+            this.setState({endereco: this.state.endereco.filter(endereco => endereco.id !== id)});
+        });
+    }
+    viewEndereco(id){
+        this.props.history.push(`/view-endereco/${id}`);
+    }
+    editEndereco(id){
+        this.props.history.push(`/add-endereco/${id}`);
     }
 
     componentDidMount(){
-        EnderecoService.getEndereco().then((res) => {
-            this.setState({endereco : res.data})
+        EnderecoService.getEnderecos().then((res) => {
+            this.setState({ endereco: res.data});
         });
     }
+
+    addEndereco(){
+        this.props.history.push('/add-endereco/_add');
+    }
+
 
     render() {
         return (
@@ -46,6 +66,11 @@ class EnderecoComponent extends Component {
                                     <td>{endereco.cidade}</td>
                                     <td>{endereco.uf}</td>
                                     <td>{endereco.pais}</td>
+                                    <td>
+                                        <button onClick={ () => this.editEmployee(endereco.id)} className="btn btn-info">Atualizar</button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(endereco.id)} className="btn btn-danger">Deletar</button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(endereco.id)} className="btn btn-info">Detalhes</button>
+                                    </td>
                                 </tr>
                              )
                          }
