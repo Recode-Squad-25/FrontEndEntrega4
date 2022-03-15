@@ -8,18 +8,37 @@ class VagaComponent extends Component {
         this.state = {
             vaga:[]
         }
+        this.addVaga = this.addVaga.bind(this);
+        this.editVaga = this.editVaga.bind(this);
+        this.deleteVaga = this.deleteVaga.bind(this);
+    }
+
+    deleteVaga(id){
+        VagaService.deleteVaga(id).then( res => {
+            this.setState({vaga: this.state.vaga.filter(vaga => vaga.id !== id)});
+        });
+    }
+    viewVaga(id){
+        this.props.history.push(`/view-vaga/${id}`);
+    }
+    editVaga(id){
+        this.props.history.push(`/add-vaga/${id}`);
     }
 
     componentDidMount(){
-       VagaService.getVaga().then((res) => {
-            this.setState({vaga : res.data})
+        VagaService.getVagas().then((res) => {
+            this.setState({ vaga: res.data});
         });
+    }
+
+    addVaga(){
+        this.props.history.push('/add-vaga/_add');
     }
 
     render() {
         return (
             <div>
-                <h1 className="text-center">Lista Vagas</h1>
+                <h1 className="text-center">Lista de Vagas</h1>
                  <table className="table table-striped">
                      <thead>
                          <tr>
@@ -52,6 +71,11 @@ class VagaComponent extends Component {
                                     <td>{vaga.formacao}</td>
                                     <td>{vaga.beneficios}</td>
                                     <td>{vaga.requisitos}</td>
+                                    <td>
+                                        <button onClick={ () => this.editEmployee(vaga.id)} className="btn btn-info">Atualizar</button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(vaga.id)} className="btn btn-danger">Deletar</button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.viewEmployee(vaga.id)} className="btn btn-info">Detalhe</button>
+                                    </td>
                                 </tr>
                              )
                          }

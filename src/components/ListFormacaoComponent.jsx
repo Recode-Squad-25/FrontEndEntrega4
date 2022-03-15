@@ -9,13 +9,33 @@ class FormacaoComponent extends Component {
         this.state = {
             formacao:[]
         }
+        this.addFormacao = this.addFormacao.bind(this);
+        this.editFormacao = this.editFormacao.bind(this);
+        this.deleteFormacao = this.deleteFormacao.bind(this);
+    }
+
+    deleteFormacao(id){
+        FormacaoService.deleteFormacao(id).then( res => {
+            this.setState({formacao: this.state.formacao.filter(formacao => formacao.id !== id)});
+        });
+    }
+    viewFormacao(id){
+        this.props.history.push(`/view-formacao/${id}`);
+    }
+    editFormacao(id){
+        this.props.history.push(`/add-formacao/${id}`);
     }
 
     componentDidMount(){
         FormacaoService.getFormacao().then((res) => {
-            this.setState({formacao : res.data})
+            this.setState({ formacao: res.data});
         });
     }
+
+    addFormacao(){
+        this.props.history.push('/add-formacao/_add');
+    }
+
 
     render() {
         return (
@@ -45,6 +65,11 @@ class FormacaoComponent extends Component {
                                     <td>{formacao.dataInicio}</td>
                                     <td>{formacao.dataFim}</td>
                                     <td>{formacao.caminhoImagemDiploma}</td>
+                                    <td>
+                                        <button onClick={ () => this.editFormacao(formacao.id)} className="btn btn-info">Update </button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.deleteFormacao(formacao.id)} className="btn btn-danger">Deletar</button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.viewFormacao(formacao.id)} className="btn btn-info">Detalhes</button>
+                                    </td>
                                 </tr>
                              )
                          }
