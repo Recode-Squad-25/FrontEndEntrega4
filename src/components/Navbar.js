@@ -16,8 +16,11 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto">
-                    <li className="nav-item">
+                        <li className="nav-item">
                             <Link to='/login' className="nav-link">Login</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/sobre' className="nav-link">Sobre</Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/vagas' className="nav-link">Vagas</Link>
@@ -30,10 +33,7 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link to='/contato' className="nav-link">Contato</Link>
-                        </li>                        
-                        <li className="nav-item">
-                            <Link to='/sobre' className="nav-link">Sobre</Link>
-                        </li>                        
+                        </li>
                     </ul>
                 </div>
             </div>
