@@ -7,12 +7,31 @@ class CurriculoComponent extends Component {
         this.state = {
             curriculo:[]
         }
+        this.addCurriculo= this.addCurriculo.bind(this);
+        this.editCurriculo= this.editCurriculo.bind(this);
+        this.deleteCurriculo= this.deleteCurriculo.bind(this);
+    }
+
+    deleteCurriculo(id){
+        CurriculoService.deleteCurriculo(id).then( res => {
+            this.setState({curriculo: this.state.curriculo.filter(curriculo => curriculo.id !== id)});
+        });
+    }
+    viewCurriculo(id){
+        this.props.history.push(`/view-curriculo/${id}`);
+    }
+    editCurriculo(id){
+        this.props.history.push(`/add-curriculo/${id}`);
     }
 
     componentDidMount(){
         CurriculoService.getCurriculo().then((res) => {
-            this.setState({curriculo : res.data})
+            this.setState({ curriculo: res.data});
         });
+    }
+
+    addCurriculo(){
+        this.props.history.push('/add-curriculo/_add');
     }
 
     render() {
@@ -48,6 +67,11 @@ class CurriculoComponent extends Component {
                                     <td>{curriculo.cpf}</td>
                                     <td>{curriculo.rg}</td>
                                     <td>{curriculo.dataNascimento}</td>
+                                    <td>
+                                        <button onClick={ () => this.editFormacao(curriculo.id)} className="btn btn-info">Update </button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.deleteFormacao(curriculo.id)} className="btn btn-danger">Deletar</button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.viewFormacao(curriculo.id)} className="btn btn-info">Detalhes</button>
+                                    </td>
                                 </tr>
                              )
                          }
