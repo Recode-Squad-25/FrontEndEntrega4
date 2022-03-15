@@ -179,7 +179,7 @@ class CreateCurriculoComponent extends Component {
                                         
                                         <div className = "form-group">
                                             <label> Data Nascimento: </label>
-                                            <input id="date" type="date" name="dataFim" value={this.state.dataFim} onChange={this.changeDataNascimentoHandler}/>                                            
+                                            <input id="date" type="date" name="dataNascimento" value={this.state.dataNascimento} onChange={this.changeDataNascimentoHandler}/>                                            
                                         </div>
 
                                         <button className="btn btn-success" onClick={this.saveOrUpdateCurriculo}>Salvar</button>
