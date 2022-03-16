@@ -40,7 +40,7 @@ const Contato = () => {
             <div className='contato-wrap'>
                 <div>
                     <div className='text-center contato-h1'>
-                        <h1>Contato</h1>
+                        <h1>Fale conosco</h1>
                     </div>
                     <div className='text-center contato-p'>
                         <p>Para dúvidas e/ou e informações.</p>
