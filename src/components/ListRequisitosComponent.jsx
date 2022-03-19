@@ -8,12 +8,31 @@ class RequisitosComponent extends Component {
         this.state = {
             requisitos:[]
         }
+        this.addRequisitos= this.addRequisitos.bind(this);
+        this.editRequisitos= this.editRequisitos.bind(this);
+        this.deleteRequisitos= this.deleteRequisitos.bind(this);
+    }
+
+    deleteRequisitos(id){
+        RequisitosService.deleteRequisitos(id).then( res => {
+            this.setState({requisitos: this.state.requisitos.filter(requisitos => requisitos.id !== id)});
+        });
+    }
+    viewRequisitos(id){
+        this.props.history.push(`/view-requisitos/${id}`);
+    }
+    editRequisitos(id){
+        this.props.history.push(`/add-requisitos/${id}`);
     }
 
     componentDidMount(){
-        RequisitosService.getRequisitos().then((res) => {
-            this.setState({requisitos : res.data})
+        RequisitosService.getRequisitoss().then((res) => {
+            this.setState({ requisitos: res.data});
         });
+    }
+
+    addRequisitos(){
+        this.props.history.push('/add-requisitos/_add');
     }
 
     render() {

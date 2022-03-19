@@ -7,12 +7,31 @@ class EmpresaComponent extends Component {
         this.state = {
             empresa: []
         }
+        this.addEmpresa = this.addEmpresa.bind(this);
+        this.editEmpresa = this.editEmpresa.bind(this);
+        this.deleteEmpresa = this.deleteEmpresa.bind(this);
+    }
+
+    deleteEmpresa(id){
+        EmpresaService.deleteEmpresa(id).then( res => {
+            this.setState({empresas: this.state.empresas.filter(empresa => empresa.id !== id)});
+        });
+    }
+    viewEmpresa(id){
+        this.props.history.push(`/view-empresa/${id}`);
+    }
+    editEmpresa(id){
+        this.props.history.push(`/add-empresa/${id}`);
     }
 
     componentDidMount() {
         EmpresaService.getEmpresa().then((res) => {
             this.setState({ empresa: res.data })
         });
+    }
+
+    addEmpresa(){
+        this.props.history.push('/add-empresa/_add');
     }
 
     render() {
