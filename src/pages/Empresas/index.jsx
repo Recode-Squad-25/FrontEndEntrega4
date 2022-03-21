@@ -3,7 +3,7 @@ import '../../styles/empresas.css'
 import empresa1 from '../../images/assets/asset_itau.jpg'
 import empresa2 from '../../images/assets/asset_ipiranga.png'
 import empresa3 from '../../images/assets/asset_localiza.png'
-import empresa4 from '../../images/assets/asset_recode.png'
+import empresa4 from '../../images/empresas/recode.jpg'
 import empresa5 from '../../images/assets/asset_senac.png'
 import empresa6 from '../../images/assets/icon_mobile.png'
 
@@ -14,9 +14,9 @@ const Empresas = () => {
                 <div className='row main-submain-text text-center'>
                     <h2>Empresas parceiras</h2>
                 </div>
-                <div className='row empresa-item'>
+                <div className='row empresa-item justify-content-around'>
                     <div className='col mt-5 empresa-item-img1'>
-                        <img src={empresa1} alt="Itaú" />
+                        <img src={empresa1} alt="Itaú"  />
                     </div>
                     <div className='col mt-5 empresa-item-img2'>
                         <img src={empresa2} alt="Ipiranga" />

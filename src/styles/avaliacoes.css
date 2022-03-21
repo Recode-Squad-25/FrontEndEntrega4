@@ -18,43 +18,36 @@
   --verde: green;
 
 }
-
-.body {
-  font-family: 'Roboto Condensed' sans-serif !important;
+body {
+  background-image: url(../images/assets/Fundo_arte.png);
 }
-
 .avaliacoes {
-    background-image: url(../images/geral/bg.jpg);
+    margin-top: 15vh;
     background-size: cover;
-    background-color: var(--preto-hover);
     text-align: center;
-    padding-bottom: 4rem;
-    margin-bottom: 0;
-    width: 100%;
   }
   
   .avaliacoes h1 {
-    color: var(--cor-secundaria2);
-    font-weight: 200;
-    padding: 3rem 0;
+    color: #fff;
+    font-weight: 200px;
     text-transform: uppercase;
   }
-  
   .avaliacoes-content {
     text-align: center;
     max-width: 53.125rem;
     margin: 0 auto 2rem auto;
     background: var(--pretoopaco);
+    border-radius: 20px;
   }
   
   .meucarousel {
     color: var(--branco);
     background: transparent;
-    margin-top: -6%;
+    margin-top: -15%;
     width: 54%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 6%;
+    padding-top: 15%;
     padding-bottom: 8%;
     padding-left: 5%;
     padding-right: 5%;
@@ -68,21 +61,18 @@
   }
   
   .meucarousel p {
-    color: var(--cinza);
+    color: #fff;
   }
-  
   .carousel .slide {
     background: transparent !important;
     height: 100% !important;
     padding-top: 2rem;
   }
-  
   .carousel-root {
     margin: auto !important;
     margin-top: 3% !important;
   }
-  
   .avaliacoes .slide img {
     width: 10rem !important;
-    border-radius: 50%;
+    border-radius: 20%;
   }
