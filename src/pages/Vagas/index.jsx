@@ -6,7 +6,7 @@ export const Vagas = () => {
     return (
             <>
                 <div className="container-fluid vagas-mae">
-                    <div class="container wrap-vagas d-block">
+                    <div className="container wrap-vagas d-block">
                             <div className='vagas-h3 text-white'>
                                 <h3>Busque por vagas</h3>
                             </div>
