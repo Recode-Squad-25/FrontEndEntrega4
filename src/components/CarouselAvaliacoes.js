@@ -10,9 +10,9 @@ import '../styles/avaliacoes.css'
 const CarouselAvaliacoes = () => {
     return (
         <Carousel
-            showArrows={true}
+            showArrows={false}
             infiniteLoop={true}
-            showThumbs={false}
+            showThumbs={true}
             showStatus={false}
             autoPlay={true}
             interval={3000}
