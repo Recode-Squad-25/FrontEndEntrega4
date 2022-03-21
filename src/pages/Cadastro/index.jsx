@@ -2,111 +2,145 @@
 import logo from '../../images/assets/icon_mobile.png'
 import { Link } from 'react-router-dom'
 import { Layouts } from '../../components/layouts/index'
-import { useState } from 'react'
+import { useEffect, useState } from "react"
+import CadastroService from '../../services/CadastroService'
 
 export const Cadastro = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [cpf, setCpf] = useState("");
-    const [password, setPassword] = useState("");
-    const [logradouro, setLogradouro] = useState("");
-    const [numero, setNumero] = useState("");
-    const [complemento, setComplemento] = useState("");
-    const [bairro, setBairro] = useState("");
-    const [cep, setCep] = useState("");
-    const [fone, setFone] = useState("");
-    const [estado, setEstado] = useState("");
-    const [cidade, setCidade] = useState("");
+
+    const [estados, setEstados] = useState([])
+    const [cidades, setCidades] = useState([])
+
+    useEffect(() => {
+        CadastroService.get('/estados').then(response => {
+            setEstados(response.data);
+        })
+    }, []);
+
+    useEffect(() => {
+        CadastroService.get('/estados/1/cidades').then(response => {
+            setCidades(response.data);
+        })
+    }, []);
+
+
+    const [campos, setCampos] = useState({
+        nome: '',
+        email: '',
+        tipo: '',
+        cpfOuCnpj: '',
+        logradouro: '',
+        numero: '',
+        complemento: '',
+        bairro: '',
+        cep: '',
+        telefone1: '',
+        estadoId: '0',
+        cidadeId: '0',
+        senha: ''
+    })
+
+    function handleInputChange(event) {
+        campos[event.target.name] = event.target.value;
+        setCampos(campos);
+    }
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        CadastroService.post('/usuarios', campos).then(response => {
+            alert(response.data.dados + 'Cadastrado com sucesso!');
+        })
+    }
 
     return (
         <Layouts>
-            <form className="login-form">
-                <span className="login-form-title">
-                    <img src={logo} alt="logo" />
-                </span>
-                <p className="login-form-subtitle">Criar conta</p>
 
+            <span className="login-form-title">
+                <img src={logo} alt="logo" />
+            </span>
+            <p className="login-form-subtitle">Criar conta</p>
+            <form onSubmit={handleFormSubmit} className="login-form">
                 <div className='align text-center mb-4 text-white'>
                     <div class="form-check form-check-inline d-inline-block">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                        <input class="form-check-input" type="radio" name="tipo" id="tipo" value="1" onChange={handleInputChange} />
                         <label class="form-check-label" for="inlineRadio1">Pessoa física</label>
                     </div>
                     <div class="form-check form-check-inline d-inline-block">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                        <input class="form-check-input" type="radio" name="tipo" id="tipo" value="2" onChange={handleInputChange} />
                         <label class="form-check-label" for="inlineRadio2">Pessoa jurídica</label>
                     </div>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={name !== "" ? 'has-val input' : 'input'} type="name" value={name} onChange={e => setName(e.target.value)} />
-                    <span className="focus-input" data-placeholder="Nome">
-                    </span>
+                    <input onChange={handleInputChange} className="has-val input input"  type="text" name='nome' id='nome' />
+                    <span className="focus-input" data-placeholder="Nome"></span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={email !== "" ? 'has-val input' : 'input'} type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='email' id='email'  />
                     <span className="focus-input" data-placeholder="Email">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={cpf !== "" ? 'has-val input' : 'input'} type="cpf" value={cpf} onChange={e => setCpf(e.target.value)} />
-                    <span className="focus-input" data-placeholder="CPF">
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='cpfOuCnpj' id='cpfOuCnpj'  />
+                    <span className="focus-input" data-placeholder="CPF ou CNPJ">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={password !== "" ? 'has-val input' : 'input'} type="password" value={password} onChange={e => setPassword(e.target.value)} />
+                    <input onChange={handleInputChange} className='has-val input input' type="password" name='senha' id='senha'  />
                     <span className="focus-input" data-placeholder="Senha">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={logradouro !== "" ? 'has-val input' : 'input'} type="logradouro" value={logradouro} onChange={e => setLogradouro(e.target.value)} />
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='logradouro' id='logradouro'  />
                     <span className="focus-input" data-placeholder="Logradouro">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={numero !== "" ? 'has-val input' : 'input'} type="numero" value={numero} onChange={e => setNumero(e.target.value)} />
-                    <span className="focus-input" data-placeholder="n°">
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='numero' id='numero'  />
+                    <span className="focus-input" data-placeholder="Número">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={complemento !== "" ? 'has-val input' : 'input'} type="complemento" value={complemento} onChange={e => setComplemento(e.target.value)} />
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='complemento' id='complemento'  />
                     <span className="focus-input" data-placeholder="Complemento">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={bairro !== "" ? 'has-val input' : 'input'} type="bairro" value={bairro} onChange={e => setBairro(e.target.value)} />
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='bairro' id='bairro'  />
                     <span className="focus-input" data-placeholder="Bairro">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={cep !== "" ? 'has-val input' : 'input'} type="cep" value={cep} onChange={e => setCep(e.target.value)} />
-                    <span className="focus-input" data-placeholder="Cep">
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='cep' id='cep'  />
+                    <span className="focus-input" data-placeholder="CEP">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={fone !== "" ? 'has-val input' : 'input'} type="fone" value={fone} onChange={e => setFone(e.target.value)} />
+                    <input onChange={handleInputChange} className='has-val input input' type="text" name='telefone1' id='telefone1'  />
                     <span className="focus-input" data-placeholder="Telefone">
                     </span>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={estado !== "" ? 'has-val input' : 'input'} type="estado" value={estado} onChange={e => setEstado(e.target.value)} />
-                    <span className="focus-input" data-placeholder="Estado">
-                    </span>
+                    <select name='estadoId' id='estadoId' className="form-select" aria-label="">
+                        <option value='0'>Selecione o Estado</option>
+                        {estados.map(estado => (<option key={estado.id} value={estado.id}>{estado.nome}</option>))}
+                    </select>
                 </div>
 
                 <div className="wrap-input">
-                    <input className={cidade !== "" ? 'has-val input' : 'input'} type="cidaded" value={cidade} onChange={e => setCidade(e.target.value)} />
-                    <span className="focus-input" data-placeholder="Cidade">
-                    </span>
+                    <select onChange={handleInputChange} name='cidadeId' id='cidadeId' className="form-select" aria-label="">
+                        <option value='0'>Selecione a Cidade</option>
+                        {cidades.map(cidade => (<option key={cidade.id} value={cidade.id}>{cidade.nome}</option>))}
+                    </select>
                 </div>
 
                 <div className="container-login-form-btn">
