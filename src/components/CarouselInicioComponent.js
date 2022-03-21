@@ -9,7 +9,7 @@ import '../styles/inicio.css'
 const CarouselInicio = () => {
     return (
             <Carousel className='carouselindex'
-                showArrows={true}
+                showArrows={false}
                 infiniteLoop={true}
                 showThumbs={false}
                 showStatus={false}

@@ -27,8 +27,8 @@ body {
     color: #fff;
 }
 .empresa-item {
-    display: flex;
-    align-content: space-around;
+    
+    
     text-align: center;
 }
 .empresa-item-img1 img {
@@ -42,20 +42,21 @@ body {
 }
 .empresa-item-img3 img {
     width: 250px;
-    margin-top: -20px;
+    margin-top: -4vh;
 }
 .empresa-item-img4 img {
-    margin-left: -65px;
-    width: 400px;
+    width: 130px;
     border-radius: 20px;
+    margin-top: -5vh;
+    margin-bottom: 10vh;
 }
 .empresa-item-img5 img {
-    margin-left: -10px;
-    margin-bottom: 50px;
+    margin-bottom: 13vh;
     width: 150px;
 }
 .empresa-item-img6 img {
     width: 120px;
+    margin-top: -3vh;
 }
 
 

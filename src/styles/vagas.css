@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed' sans-serif !important;
+  }
+  
+.vagas-mae {
+      background-image: url(../images/assets/Fundo_arte.png);
+      padding: 3rem 0;
+}
+.wrap-vagas {
+    margin-top: 60px;
+    height: 60%;
+    width: 80%;
+    background-color:#161616;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.vagas-form input {
+    margin-right: 2vw;
+}
+.vagas-h3 h3 {
+    color: fff;
+    text-align: center;
+}
