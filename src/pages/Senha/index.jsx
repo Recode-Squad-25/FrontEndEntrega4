@@ -1,4 +1,5 @@
 /*PÁGINA RECUPERAÇÃO DE SENHA COMPLETA*/
+import React from 'react'
 import Layouts from '../../components/layouts/index'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'

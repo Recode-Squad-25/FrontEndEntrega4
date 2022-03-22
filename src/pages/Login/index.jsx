@@ -1,4 +1,5 @@
 /*PÁGINA LOGIN COMPLETA*/
+import React from 'react'
 import { Layouts } from '../../components/layouts/index'
 import { Link } from "react-router-dom"
 import { useRef } from 'react'
