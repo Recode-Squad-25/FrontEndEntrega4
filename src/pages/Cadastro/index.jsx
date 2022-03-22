@@ -17,7 +17,7 @@ export const Cadastro = () => {
     }, []);
 
     useEffect(() => {
-        CadastroService.get('/estados/1/cidades').then(response => {
+        CadastroService.get('/estados/4/cidades').then(response => {
             setCidades(response.data);
         })
     }, []);
@@ -137,7 +137,7 @@ export const Cadastro = () => {
                 </div>
 
                 <div className="wrap-input">
-                    <select onChange={handleInputChange} name='cidadeId' id='cidadeId' className="form-select" aria-label="">
+                    <select name='cidadeId' id='cidadeId' className="form-select" aria-label="">
                         <option value='0'>Selecione a Cidade</option>
                         {cidades.map(cidade => (<option key={cidade.id} value={cidade.id}>{cidade.nome}</option>))}
                     </select>

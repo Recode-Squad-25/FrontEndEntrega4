@@ -1,4 +1,5 @@
 import React from 'react';
+import CardVagasComponent from '../../components/CardVagasComponent';
 import '../../styles/vagas.css'
 
 
@@ -16,6 +17,8 @@ export const Vagas = () => {
                             </form>
                         </div>
                     </div>
+
+                    <CardVagasComponent />
                 
             </>
         

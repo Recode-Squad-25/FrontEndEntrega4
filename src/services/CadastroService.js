@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const Cadastro = axios.create ({
-    baseURL: "http://localhost:8080/"
+    baseURL: "https://colore-back-end.herokuapp.com/"
 })
 
 export default Cadastro
