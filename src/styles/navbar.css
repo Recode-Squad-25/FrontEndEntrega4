@@ -71,6 +71,6 @@
     border-top: 0.1050rem solid var(--cor-secundaria2);
   }
   
-  div{
+  -div{
  border: solid red;
   }
