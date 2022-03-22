@@ -19,7 +19,7 @@ import Card from '../../components/SobreCard'
 const Sobre = () => {
     return (
         <div className='container-fluid container-mae'>
-            <div className="align-content-around">
+            <div>
 
                 <div className="d-flex justify-content-center align-items-center my-3">
                     <div className="d-block text-center col-lg-6 container-mae-h1">
@@ -65,15 +65,15 @@ const Sobre = () => {
                     <h2>Nosso Time</h2>
                 </div>
 
-                <div className='d-block d-sm-flex text-center container-mae-time-ajuste'>
-                    <div className="d-block d-sm-flex text-center">
-                        <Card className="card1" FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
+                <div className='text-center container-mae-time-ajuste'>
+                    <div className="d-block d-md-flex text-center col-12">
+                        <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
                         <Card FotoPessoa={Joao} NomePessoa="João Victor" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/ssjoao2021/" Github="https://github.com/devictor4" Instagram="https://www.instagram.com/joaovtss99/" />
                         <Card FotoPessoa={Juliana} NomePessoa="Juliana Mesquita" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/juliana-maria-de-sousa-mesquita/" Github="https://github.com/JulianaMariaSousaMesquita" Instagram="https://www.instagram.com/julianamesquitaoficial/" />
                     </div>
                 </div>
-                <div className='d-block d-sm-flex text-center container-mae-time-ajuste'>
-                    <div className="d-block d-sm-flex text-center ">
+                <div className='text-center container-mae-time-ajuste'>
+                    <div className="d-block d-md-flex text-center col-12">
                         <Card FotoPessoa={Leonardo} NomePessoa="Leonardo Mendonça" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/leonardoalvesm/" Github="https://github.com/LeonardFLY" Instagram="https://www.instagram.com/leonard_fly/" />
                         <Card FotoPessoa={Luiz} NomePessoa="Luiz Henrique" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
                         <Card FotoPessoa={Wesley} NomePessoa="Wesley Azevedo" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/wesley-de-azevedo/" Github="https://github.com/wesleyazevedo957" Instagram="https://www.instagram.com/wesley.azevedo.rj/" />

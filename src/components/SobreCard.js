@@ -6,11 +6,14 @@ import '../styles/sobre.css'
 
 const SobreCard = (props) =>{
     return (
-<div className="col-sm-6 mb-5">
+<div className="col-md-4">
 
-    <div className="rounded px-4 social">
-        <img src={props.FotoPessoa} style={{minwidth:100}} className="img-fluid rounded-circle my-3 img-thumbnail " alt={"Foto de rosto de " + props.NomePessoa}/>
-        <h5 className="mb-0 ">{props.NomePessoa}</h5><span className="small text-uppercase container-mae-spantext">Fundador e {props.funcao}</span>
+    <div className="rounded social">
+        <img src={props.FotoPessoa} className="img-fluid rounded-circle my-3 img-thumbnail " alt={"Foto de rosto de " + props.NomePessoa}/>
+        <div className="dados">
+            <h5 className="mb-0 ">{props.NomePessoa}</h5>
+            <span className="small text-uppercase container-mae-spantext">Fundador e {props.funcao}</span>
+        </div>
         <div className="align-items-center p-1 container-mae-icons">
             <ul className="list-inline">
                 <li className="list-inline-item">

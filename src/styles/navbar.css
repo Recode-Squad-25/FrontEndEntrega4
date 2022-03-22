@@ -28,7 +28,7 @@
   }
   
   .logo {
-    width: 3.50rem;
+    width: 2.30rem;
   }
   
   .nav-link {
@@ -71,6 +71,6 @@
     border-top: 0.1050rem solid var(--cor-secundaria2);
   }
   
-  -div{
+  div{
  border: solid red;
   }
