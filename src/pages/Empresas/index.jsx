@@ -14,7 +14,7 @@ const Empresas = () => {
                 <div className='row main-submain-text text-center'>
                     <h2>Empresas parceiras</h2>
                 </div>
-                <div className='row empresa-item justify-content-around'>
+                <div className='row empresa-item justify-content-around d-block d-sm-flex'>
                     <div className='col mt-5 empresa-item-img1'>
                         <img src={empresa1} alt="Itaú"  />
                     </div>

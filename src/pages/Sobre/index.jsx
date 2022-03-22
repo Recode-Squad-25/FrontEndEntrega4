@@ -64,7 +64,7 @@ const Sobre = () => {
                 <div className="text-center mt-5 container-mae-time">
                     <h2>Nosso Time</h2>
                 </div>
-
+            <div className='container-mae-time-ajuste1'>
                 <div className='d-block d-sm-flex text-center container-mae-time-ajuste'>
                     <div className="d-block d-sm-flex text-center">
                         <Card className="card1" FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
@@ -79,6 +79,7 @@ const Sobre = () => {
                         <Card FotoPessoa={Wesley} NomePessoa="Wesley Azevedo" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/wesley-de-azevedo/" Github="https://github.com/wesleyazevedo957" Instagram="https://www.instagram.com/wesley.azevedo.rj/" />
                     </div>
                 </div>
+            </div>
 
             </div>
         </div>
