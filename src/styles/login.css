@@ -239,7 +239,7 @@
     left: 0;
     width: 0;
     height: 2px;
-
+    transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -260,7 +260,7 @@
     top: 16px;
     left: 0px;
     padding-left: 5px;
-
+    transition: all 0.45s;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;

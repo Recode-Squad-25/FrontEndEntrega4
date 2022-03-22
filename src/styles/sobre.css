@@ -36,12 +36,14 @@
        
 }
 
-
-
 .container-mae-spantext {
     text-align: justify;
     color: white; text-shadow: black 0.1em 0.1em 0.3em; 
 }
+.social{
+    min-height: 18rem;
+}
+
 .social img {
     width: 100px;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -50,14 +52,13 @@
 .social img:hover {
     transform:scale(1.25, 1.25);
 }
-.social img:hover::after {
-    opacity: 1;
-}
+
 .social h5 {
     font-size: 25px;
     color: white; text-shadow: black 0.1em 0.1em 0.3em; 
 }
 .container-mae-icons img {
+    
     width: 40px;
 }
 .icon {
@@ -66,4 +67,8 @@
 }
 .icon:hover {
     background-color: #fff;
+}
+
+.dados{
+    min-height: 7rem;
 }
