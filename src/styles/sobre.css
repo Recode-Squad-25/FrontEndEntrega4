@@ -27,9 +27,13 @@
     text-align: justify;
     color: white; text-shadow: black 0.1em 0.1em 0.3em;
 }
+.container-mae-time-ajuste1 {
+    width: 100%;
+    
+}
 .container-mae-time-ajuste {
     display: flex;
-    
+       
 }
 
 
