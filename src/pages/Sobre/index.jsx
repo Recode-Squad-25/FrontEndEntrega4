@@ -75,7 +75,7 @@ const Sobre = () => {
                 <div className='d-block d-sm-flex text-center container-mae-time-ajuste'>
                     <div className="d-block d-sm-flex text-center ">
                         <Card FotoPessoa={Leonardo} NomePessoa="Leonardo Mendonça" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/leonardoalvesm/" Github="https://github.com/LeonardFLY" Instagram="https://www.instagram.com/leonard_fly/" />
-                        <Card FotoPessoa={Luiz} NomePessoa="Luiz Henrique" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
+                        <Card FotoPessoa={Luiz} NomePessoa="Luiz Henrique" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/luiz-freitas-28995322a/" Github="https://github.com/Luizfre" />
                         <Card FotoPessoa={Wesley} NomePessoa="Wesley Azevedo" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/wesley-de-azevedo/" Github="https://github.com/wesleyazevedo957" Instagram="https://www.instagram.com/wesley.azevedo.rj/" />
                     </div>
                 </div>

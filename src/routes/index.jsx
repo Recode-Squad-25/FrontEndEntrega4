@@ -12,6 +12,15 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Sobre from '../pages/Sobre/index'
 
+import Sidebar from '../components/Painel/Vagas/sidebar'
+import User from '../components/Painel/User/user'
+import Empresa from '../components/Painel/Empresa/empresa'
+
+import Itau from '../pages/Vagas/Pages/itau'
+import Ipiranga from '../pages/Vagas/Pages/ipiranga'
+import Localiza from '../pages/Vagas/Pages/localiza'
+
+
 const AppRouter = () => {
     return (
         <Router>
@@ -26,6 +35,16 @@ const AppRouter = () => {
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/avaliacoes" element={<Avaliacoes />} />
                 <Route path="/sobre" element={<Sobre />} />
+
+                <Route path="/sidebar" element={<Sidebar />} />
+                <Route path="/user" element={<User />} />
+                <Route path="/empresa" element={<Empresa />} />
+
+
+                <Route path="/itau" element={<Itau />} />
+                <Route path="/ipiranga" element={<Ipiranga />} />
+                <Route path="/localiza" element={<Localiza />} />
+
             </Routes>
             <Footer/>
         </Router>

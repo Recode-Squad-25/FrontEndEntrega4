@@ -1,6 +1,11 @@
 import React from 'react';
 import '../../styles/vagas.css'
 
+import itau from '../../images/vagas/itaulogo.webp'
+import ipiranga from '../../images/vagas/ipirangalogo.png'
+import localiza from '../../images/vagas/localiza.jpg'
+
+
 
 export const Vagas = () => {
     return (
@@ -16,6 +21,40 @@ export const Vagas = () => {
                             </form>
                         </div>
                     </div>
+
+
+            <div className="container-fluid main">
+            <div className='main-submain'>
+                <div className='row main-submain-text text-center'>
+                    <h2>Vagas Disponíveis</h2>
+                </div>
+                <div className='row empresa-item justify-content-around'>
+                    <div className='card text-center'>
+                        <h2>Itáu</h2>
+                        <br />
+                        <img src={itau} alt="Itaú"  />
+                        <hr />
+                        <br />
+                        <button class="btn btn-outline-warning vagas-btn" type="submit"><a href="/itau">Saiba Mais</a></button>
+                    </div>
+                    <div className='card text-center'>
+                    <h2>Ipiranga</h2>
+                        <img src={ipiranga} alt="Ipiranga" />
+                        <hr />
+                        <br />
+                        <button class="btn btn-outline-warning vagas-btn" type="submit"><a href="/ipiranga">Saiba Mais</a></button>
+                    </div>
+                    <div className='card text-center'>
+                    <h2>Localiza</h2>
+                        <img src={localiza} alt="Localiza" />
+                        <hr />
+                        <br />
+                        <button class="btn btn-outline-warning vagas-btn" type="submit"><a href="/localiza">Saiba Mais</a></button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
                 
             </>
         
