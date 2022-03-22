@@ -13,7 +13,7 @@ export const Vagas = () => {
                             </div>
                             <form className="vagas-form d-block d-lg-flex text-center">
                                 <input className="form-control me-2" type="search" placeholder="ex: 'Programação'" aria-label="Search" />
-                                <button className="btn btn-outline-warning vagas-btn mt-3" type="submit">Pesquisar</button>
+                                <button className="btn btn-outline-warning vagas-btn" type="submit">Pesquisar</button>
                             </form>
                         </div>
                     </div>
