@@ -38,9 +38,9 @@ class CardVagasComponent extends Component {
                         <div className="card" style={{ backgroundColor:"black"}}>
                             <img className="img-fluid card-img-top" alt="..." src={foto3} />
                             <div className="card-body">
-                                <h5 className="card-title">Oprotunidade para Analista de sistemas</h5>
+                                <h5 className="card-title">Vem ser DEV</h5>
                                 <p className="card-text"> Cargo : Analista de sistemas Junior - Salario: R$ 4500</p>
-                                <p className="card-text"> Beneficios: Vale Transporte - Vale refeição  - Vale alimentação </p>
+                                <p className="card-text"> Beneficios: Vale Transporte - Vale alimentação </p>
                                 <button className="btn btn-outline-warning vagas-btn">Detalhes</button>
                             </div>
                         </div>
