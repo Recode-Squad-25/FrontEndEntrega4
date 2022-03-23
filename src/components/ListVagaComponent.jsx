@@ -26,7 +26,7 @@ class VagaComponent extends Component {
     }
 
     componentDidMount(){
-        VagaService.getVagas().then((res) => {
+        VagaService.getVaga().then((res) => {
             this.setState({ vaga: res.data});
         });
     }

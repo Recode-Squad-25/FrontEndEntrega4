@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const VAGA_REST_API_URL = 'https://colore-back-end.herokuapp.com/Vaga'
+const VAGA_REST_API_URL = 'https://colore-back-end.herokuapp.com/'
 
 class VagaService {
     getVaga(){

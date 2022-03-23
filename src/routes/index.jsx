@@ -11,6 +11,10 @@ import  Inicio  from '../components/InicioComponent'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Sobre from '../pages/Sobre/index'
+import ListVaga from '../components/ListVagaComponent'
+import ListCurriculo from '../components/ListCurriculoComponent'
+import CreateVaga from '../components/CreateVagaComponent'
+import CreateCurriculo from '../components/CreateCurriculoComponent'
 
 const AppRouter = () => {
     return (
@@ -26,6 +30,10 @@ const AppRouter = () => {
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/avaliacoes" element={<Avaliacoes />} />
                 <Route path="/sobre" element={<Sobre />} />
+                <Route path="/vagas" element={<ListVaga />} />
+                <Route path="/curriculo" element={<ListCurriculo />} />
+                <Route path="/add-vaga" element={<CreateVaga />} />
+                <Route path="/add-curriculo" element={<CreateCurriculo />} />
             </Routes>
             <Footer/>
         </Router>
