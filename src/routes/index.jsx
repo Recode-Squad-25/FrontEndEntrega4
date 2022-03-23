@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Senha } from '../pages/Senha/index'
 import { Login } from '../pages/Login/index'
 import { Cadastro } from '../pages/Cadastro/index'
+import {PainelUsuario} from '../pages/PainelUsuario/index'
 import  Empresas  from '../pages/Empresas/index'
 import  Contato  from '../pages/Contato/index'
 import  Avaliacoes  from '../pages/Avaliacoes/index'
@@ -15,6 +16,7 @@ import ListVaga from '../components/ListVagaComponent'
 import ListCurriculo from '../components/ListCurriculoComponent'
 import CreateVaga from '../components/CreateVagaComponent'
 import CreateCurriculo from '../components/CreateCurriculoComponent'
+
 
 const AppRouter = () => {
     return (
@@ -34,6 +36,7 @@ const AppRouter = () => {
                 <Route path="/curriculo" element={<ListCurriculo />} />
                 <Route path="/add-vaga" element={<CreateVaga />} />
                 <Route path="/add-curriculo" element={<CreateCurriculo />} />
+                <Route path="/painel-usuario" element={<PainelUsuario />} />
             </Routes>
             <Footer/>
         </Router>
