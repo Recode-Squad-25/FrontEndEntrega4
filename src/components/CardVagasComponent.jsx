@@ -4,12 +4,10 @@ import foto2 from '../images/vagas/2.png';
 import foto3 from '../images/vagas/3.png';
 
 class CardVagasComponent extends Component {
-
     render() {
         return (
             <div className='container text-white'>
                 <div className='row'>
-
                     <div className="col" style={{ maxWidth: "22rem"}}>
                         <div className="card" style={{ backgroundColor:"black"}}>
                             <img className="img-fluid card-img-top" alt="..." src={foto1} />
