@@ -57,7 +57,9 @@ body {
     margin-top: -3vh;
 }
 
-
+a {
+  color: white;
+}
 
 
 .empresa-item-img1 img {
