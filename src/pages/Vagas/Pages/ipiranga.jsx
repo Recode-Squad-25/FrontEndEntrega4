@@ -32,7 +32,7 @@ export const Ipiranga= () => {
                             <p>Salário: A Combinar <br /> + Vale Transporte</p>
                             
                             <hr />
-                            <button class="btn btn-primary vagas-btn" type="submit"><a href="/cadastro">Cadastre-Se</a></button>
+                            <button className="btn btn-primary vagas-btn" type="submit"><a href="/cadastro">Cadastre-Se</a></button>
                             <br />
                         </h4>
                     </div>
