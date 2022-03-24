@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import VagaService from '../services/VagaService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class UpdateVagaComponent extends Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class UpdateVagaComponent extends Component {
     }
 
     componentDidMount(){
-        VagaService.getVagaById(this.state.id).then( (res) =>{
+        api.getVagaById(this.state.id).then( (res) =>{
             let vaga = res.data;
             this.setState({
                 titulo: vaga.titulo,
@@ -51,7 +52,7 @@ class UpdateVagaComponent extends Component {
         let vaga = {titulo: this.state.titulo, cargo: this.state.cargo, salario: this.state.salario,  descricao: this.state.descricao, beneficios: this.state.beneficios, dataInicioInscricao: this.state.dataInicioInscricao, dataFimInscricao: this.state.dataFimInscricao, formacao: this.state.formacao, requisitos: this.state.requisitos};
         console.log('vaga => ' + JSON.stringify(vaga));
         console.log('id => ' + JSON.stringify(this.state.id));
-        VagaService.updateVaga(vaga, this.state.id).then( res => {
+        api.updateVaga(vaga, this.state.id).then( res => {
             this.props.history.push('/vagas');
         });
     }

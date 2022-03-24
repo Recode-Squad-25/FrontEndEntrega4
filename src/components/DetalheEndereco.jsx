@@ -1,23 +1,8 @@
 import React, { Component } from 'react';
-import EnderecoService from '../services/EnderecoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
-class ViewEnderecoComponent extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            id: this.props.match.params.id,
-            endereco: {}
-        }
-    }
-
-    componentDidMount(){
-        EnderecoService.getEnderecoById(this.state.id).then( res => {
-            this.setState({endereco: res.data});
-        })
-    }
-
-    render() {
+export const DetalheEndereco = () => {
         return (
             <div>
                 <br></br>
@@ -62,6 +47,3 @@ class ViewEnderecoComponent extends Component {
             </div>
         )
     }
-}
-
-export default ViewEnderecoComponent;

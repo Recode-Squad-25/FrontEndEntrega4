@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import EmpresaService from '../services/EmpresaService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class ViewEmpresaComponent extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class ViewEmpresaComponent extends Component {
     }
 
     componentDidMount(){
-        EmpresaService.getEmpresaById(this.state.id).then( res => {
+        api.getEmpresaById(this.state.id).then( res => {
             this.setState({empresa: res.data});
         })
     }

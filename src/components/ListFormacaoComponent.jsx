@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
-import FormacaoService from '../services/FormacaoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class FormacaoComponent extends Component {
 
@@ -15,7 +16,7 @@ class FormacaoComponent extends Component {
     }
 
     deleteFormacao(id){
-        FormacaoService.deleteFormacao(id).then( res => {
+        api.deleteFormacao(id).then( res => {
             this.setState({formacao: this.state.formacao.filter(formacao => formacao.id !== id)});
         });
     }
@@ -27,7 +28,7 @@ class FormacaoComponent extends Component {
     }
 
     componentDidMount(){
-        FormacaoService.getFormacao().then((res) => {
+        api.getFormacao().then((res) => {
             this.setState({ formacao: res.data});
         });
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import RequisitosService from '../services/RequisitosService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class RequisitosComponent extends Component {
     
@@ -14,7 +15,7 @@ class RequisitosComponent extends Component {
     }
 
     deleteRequisitos(id){
-        RequisitosService.deleteRequisitos(id).then( res => {
+        api.deleteRequisitos(id).then( res => {
             this.setState({requisitos: this.state.requisitos.filter(requisitos => requisitos.id !== id)});
         });
     }
@@ -26,7 +27,7 @@ class RequisitosComponent extends Component {
     }
 
     componentDidMount(){
-        RequisitosService.getRequisitoss().then((res) => {
+        api.getRequisitoss().then((res) => {
             this.setState({ requisitos: res.data});
         });
     }

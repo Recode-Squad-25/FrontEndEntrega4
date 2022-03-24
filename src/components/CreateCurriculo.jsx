@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import CurriculoService from '../services/CurriculoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
-class CreateCurriculoComponent extends Component {
+class CreateCurriculo extends Component {
     constructor(props) {
         super(props)
 
@@ -33,7 +34,7 @@ class CreateCurriculoComponent extends Component {
         if(this.state.id === '_add'){
             return
         }else{
-            CurriculoService.getCurriculoById(this.state.id).then( (res) =>{
+            api.getCurriculoById(this.state.id).then( (res) =>{
                 let curriculo = res.data;
                 this.setState({
                     nome: curriculo.nome,
@@ -55,11 +56,11 @@ class CreateCurriculoComponent extends Component {
         console.log('curriculo => ' + JSON.stringify(curriculo));
 
         if(this.state.id === '_add'){
-            CurriculoService.createCurriculo(curriculo).then(res =>{
+            api.createCurriculo(curriculo).then(res =>{
                 this.props.history.push('/curriculo');
             });
         }else{
-            CurriculoService.updateCurriculo(curriculo, this.state.id).then( res => {
+            api.updateCurriculo(curriculo, this.state.id).then( res => {
                 this.props.history.push('/curriculo');
             });
         }
@@ -195,4 +196,4 @@ class CreateCurriculoComponent extends Component {
     }
 }
 
-export default CreateCurriculoComponent;
+export default CreateCurriculo;

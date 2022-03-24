@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import EnderecoService from '../services/EnderecoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class EnderecoComponent extends Component {
     constructor(props){
@@ -13,7 +14,7 @@ class EnderecoComponent extends Component {
     }
 
     deleteEndereco(id){
-        EnderecoService.deleteEndereco(id).then( res => {
+        api.deleteEndereco(id).then( res => {
             this.setState({endereco: this.state.endereco.filter(endereco => endereco.id !== id)});
         });
     }
@@ -25,7 +26,7 @@ class EnderecoComponent extends Component {
     }
 
     componentDidMount(){
-        EnderecoService.getEnderecos().then((res) => {
+        api.getEnderecos().then((res) => {
             this.setState({ endereco: res.data});
         });
     }

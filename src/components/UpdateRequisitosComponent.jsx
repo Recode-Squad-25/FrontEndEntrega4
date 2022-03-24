@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import RequisitosService from '../services/RequisitosService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class UpdateRequisitosComponent extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class UpdateRequisitosComponent extends Component {
     }
 
     componentDidMount(){
-        RequisitosService.getRequisitosById(this.state.id).then( (res) =>{
+        api.getRequisitosById(this.state.id).then( (res) =>{
             let requisitos = res.data;
             this.setState({
                 areaAtuacao: requisitos.areaAtuacao,
@@ -39,7 +40,7 @@ class UpdateRequisitosComponent extends Component {
         let requisitos = {areaAtuacao: this.state.areaAtuacao, cargo: this.state.cargo, tempoExperiencia: this.state.tempoExperiencia, escolaridade: this.state.escolaridade, habilidades: this.state.habilidades};
         console.log('requisitos => ' + JSON.stringify(requisitos));
         console.log('id => ' + JSON.stringify(this.state.id));
-        RequisitosService.updateRequisitos(requisitos, this.state.id).then( res => {
+        api.updateRequisitos(requisitos, this.state.id).then( res => {
             this.props.history.push('/requisitos');
         });
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FormacaoService from '../services/FormacaoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class UpdateFormacaoComponent extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class UpdateFormacaoComponent extends Component {
     }
 
     componentDidMount(){
-        FormacaoService.getFormacaoById(this.state.id).then( (res) =>{
+        api.getFormacaoById(this.state.id).then( (res) =>{
             let formacao = res.data;
             this.setState({firstName: formacao.firstName,
                 lastName: formacao.lastName,
@@ -38,7 +39,7 @@ class UpdateFormacaoComponent extends Component {
         let formacao = {titulo: this.state.titulo, nivel: this.state.nivel, instituicao: this.state.instituicao, dataInicio: this.state.dataInicio, dataFim: this.state.dataFim, caminhoImagemDiploma: this.state.caminhoImagemDiploma};
         console.log('formacao => ' + JSON.stringify(formacao));
         console.log('id => ' + JSON.stringify(this.state.id));
-        FormacaoService.updateFormacao(formacao, this.state.id).then( res => {
+        api.updateFormacao(formacao, this.state.id).then( res => {
             this.props.history.push('/formacao');
         });
     }

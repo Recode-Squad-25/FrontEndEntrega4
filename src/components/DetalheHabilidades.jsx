@@ -1,23 +1,8 @@
-import React, { Component } from 'react';
-import HabilidadesService from '../services/HabilidadesService';
+import React from 'react';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
-class ViewHabilidadesComponent extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            id: this.props.match.params.id,
-            habilidades: {}
-        }
-    }
-
-    componentDidMount(){
-        HabilidadesService.getHabilidadesById(this.state.id).then( res => {
-            this.setState({habilidades: res.data});
-        })
-    }
-
-    render() {
+export const DetalheHabilidades = () =>{
         return (
             <div>
                 <br></br>
@@ -50,6 +35,3 @@ class ViewHabilidadesComponent extends Component {
             </div>
         )
     }
-}
-
-export default ViewHabilidadesComponent;
