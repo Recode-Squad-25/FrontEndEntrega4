@@ -13,7 +13,7 @@ export const Senha = () => {
         ForgotPassword.post('/auth/forgot', {
           email: email.current.value
         }).then((res) => console.log(res))
-          .catch((err) => console.log(err))
+          .catch((err) => alert("Verifique seu email!"))
       } 
     return (
         <Layouts>
