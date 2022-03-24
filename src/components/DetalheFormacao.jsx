@@ -1,23 +1,8 @@
 import React, { Component } from 'react';
-import FormacaoService from '../services/FormacaoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
-class ViewFormacaoComponent extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            id: this.props.match.params.id,
-            formacao: {}
-        }
-    }
-
-    componentDidMount(){
-        FormacaoService.getFormacaoById(this.state.id).then( res => {
-            this.setState({formacao: res.data});
-        })
-    }
-
-    render() {
+export const DetalheFormacao = () => {
         return (
             <div>
                 <br></br>
@@ -54,7 +39,3 @@ class ViewFormacaoComponent extends Component {
             </div>
         )
     }
-}
-
-
-export default ViewFormacaoComponent;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import HabilidadesService from '../services/HabilidadesService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class HabilidadesComponent extends Component {
     
@@ -14,7 +15,7 @@ class HabilidadesComponent extends Component {
     }
 
     deleteHabilidades(id){
-        HabilidadesService.deleteHabilidades(id).then( res => {
+        api.deleteHabilidades(id).then( res => {
             this.setState({habilidades: this.state.habilidades.filter(habilidades => habilidades.id !== id)});
         });
     }
@@ -26,7 +27,7 @@ class HabilidadesComponent extends Component {
     }
 
     componentDidMount(){
-        HabilidadesService.getHabilidades().then((res) => {
+        api.getHabilidades().then((res) => {
             this.setState({ habilidades: res.data});
         });
     }

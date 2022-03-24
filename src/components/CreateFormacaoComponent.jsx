@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FormacaoService from '../services/FormacaoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class CreateFormacaoComponent extends Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class CreateFormacaoComponent extends Component {
         if(this.state.id === '_add'){
             return
         }else{
-            FormacaoService.getFormacaoById(this.state.id).then( (res) =>{
+            api.getFormacaoById(this.state.id).then( (res) =>{
                 let formacao = res.data;
                 this.setState({
                     titulo: formacao.titulo,
@@ -46,11 +47,11 @@ class CreateFormacaoComponent extends Component {
         console.log('formacao => ' + JSON.stringify(formacao));
 
         if(this.state.id === '_add'){
-            FormacaoService.createFormacao(formacao).then(res =>{
+            api.createFormacao(formacao).then(res =>{
                 this.props.history.push('/formacao');
             });
         }else{
-            FormacaoService.updateFormacao(formacao, this.state.id).then( res => {
+            api.updateFormacao(formacao, this.state.id).then( res => {
                 this.props.history.push('/formacao');
             });
         }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import VagaService from '../services/VagaService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class CreateVagaComponent extends Component {
     constructor(props) {
@@ -33,7 +34,7 @@ class CreateVagaComponent extends Component {
         if(this.state.id === '_add'){
             return
         }else{
-            VagaService.getVagaById(this.state.id).then( (res) =>{
+            api.getVagaById(this.state.id).then( (res) =>{
                 let vaga = res.data;
                 this.setState({
                     titulo: vaga.titulo,
@@ -56,11 +57,11 @@ class CreateVagaComponent extends Component {
         console.log('vaga => ' +  JSON.stringify(vaga));
 
         if(this.state.id === '_add'){
-            VagaService.createVaga(vaga).then(res =>{
+            api.createVaga(vaga).then(res =>{
                 this.props.history.push('/vaga');
             });
         }else{
-            VagaService.updateVaga(vaga, this.state.id).then( res => {
+            api.updateVaga(vaga, this.state.id).then( res => {
                 this.props.history.push('/vaga');
             });
         }

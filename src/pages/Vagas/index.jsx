@@ -1,5 +1,5 @@
 import React from 'react';
-import CardVagasComponent from '../../components/CardVagasComponent';
+import { CardVagas } from '../../components/CardVagas';
 import '../../styles/vagas.css'
 
 
@@ -18,7 +18,7 @@ export const Vagas = () => {
                         </div>
                     </div>
 
-                    <CardVagasComponent />
+                    <CardVagas />
                 
             </>
         

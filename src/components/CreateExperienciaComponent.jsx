@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ExperienciaService from '../services/ExperienciaService';
+import api from '../services/api';
 
 class CreateExperienciaComponent extends Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class CreateExperienciaComponent extends Component {
         if(this.state.id === '_add'){
             return
         }else{
-            ExperienciaService.getExperienciaById(this.state.id).then( (res) =>{
+            api.getExperienciaById(this.state.id).then( (res) =>{
                 let experiencia = res.data;
                 this.setState({
                     titulo: experiencia.titulo,
@@ -47,11 +47,11 @@ class CreateExperienciaComponent extends Component {
         console.log('experiencia => ' + JSON.stringify(experiencia));
 
         if(this.state.id === '_add'){
-            ExperienciaService.createExperiencia(experiencia).then(res =>{
+            api.createExperiencia(experiencia).then(res =>{
                 this.props.history.push('/experiencias');
             });
         }else{
-            ExperienciaService.updateExperiencia(experiencia, this.state.id).then( res => {
+            api.updateExperiencia(experiencia, this.state.id).then( res => {
                 this.props.history.push('/experiencias');
             });
         }

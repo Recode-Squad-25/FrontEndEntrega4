@@ -3,6 +3,15 @@
     padding: 0;
     font-family: 'Roboto Condensed' sans-serif !important;
   }
+
+div {
+        margin-top: 20px;
+        margin-bottom: 5px;
+  }
+
+img .detalhes {
+      width: 50px;
+}
   
 .vagas-mae {
       background-image: url(../images/assets/Fundo_arte.png);

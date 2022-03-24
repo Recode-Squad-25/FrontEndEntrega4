@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import EnderecoService from '../services/EnderecoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class CreateEnderecoComponent extends Component {
     constructor(props) {
@@ -31,7 +32,7 @@ class CreateEnderecoComponent extends Component {
         if(this.state.id === '_add'){
             return
         }else{
-            EnderecoService.getEnderecoById(this.state.id).then( (res) =>{
+            api.getEnderecoById(this.state.id).then( (res) =>{
                 let endereco = res.data;
                 this.setState({
                     cep: endereco.cep,
@@ -52,11 +53,11 @@ class CreateEnderecoComponent extends Component {
         console.log('endereco => ' + JSON.stringify(endereco));
 
         if(this.state.id === '_add'){
-            EnderecoService.createEndereco(endereco).then(res =>{
+            api.createEndereco(endereco).then(res =>{
                 this.props.history.push('/endereco');
             });
         }else{
-            EnderecoService.updateEndereco(endereco, this.state.id).then( res => {
+            api.updateEndereco(endereco, this.state.id).then( res => {
                 this.props.history.push('/endereco');
             });
         }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import VagaService from '../services/VagaService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class VagaComponent extends Component {
      
@@ -14,7 +15,7 @@ class VagaComponent extends Component {
     }
 
     deleteVaga(id){
-        VagaService.deleteVaga(id).then( res => {
+        api.deleteVaga(id).then( res => {
             this.setState({vaga: this.state.vaga.filter(vaga => vaga.id !== id)});
         });
     }
@@ -26,7 +27,7 @@ class VagaComponent extends Component {
     }
 
     componentDidMount(){
-        VagaService.getVaga().then((res) => {
+        api.getVaga().then((res) => {
             this.setState({ vaga: res.data});
         });
     }

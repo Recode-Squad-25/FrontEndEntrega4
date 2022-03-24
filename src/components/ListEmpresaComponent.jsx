@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import EmpresaService from '../services/EmpresaService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class EmpresaComponent extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class EmpresaComponent extends Component {
     }
 
     deleteEmpresa(id){
-        EmpresaService.deleteEmpresa(id).then( res => {
+        api.deleteEmpresa(id).then( res => {
             this.setState({empresas: this.state.empresas.filter(empresa => empresa.id !== id)});
         });
     }
@@ -25,7 +26,7 @@ class EmpresaComponent extends Component {
     }
 
     componentDidMount() {
-        EmpresaService.getEmpresa().then((res) => {
+        api.getEmpresa().then((res) => {
             this.setState({ empresa: res.data })
         });
     }

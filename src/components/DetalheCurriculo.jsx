@@ -1,24 +1,9 @@
-import React, { Component } from 'react';
-import CurriculoService from '../services/CurriculoService';
+import React from 'react';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
-class ViewCurriculoComponent extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            id: this.props.match.params.id,
-            curriculo: {}
-        }
-    }
-
-    componentDidMount(){
-        CurriculoService.getCurriculoById(this.state.id).then( res => {
-            this.setState({curriculo: res.data});
-        })
-    }
-
-    render() {
-        return (
+export const DetalheCurriculo = () => {
+            return (
             <div>
                 <br></br>
                 <div className = "card col-md-6 offset-md-3">
@@ -66,6 +51,3 @@ class ViewCurriculoComponent extends Component {
             </div>
         )
     }
-}
-
-export default ViewCurriculoComponent;

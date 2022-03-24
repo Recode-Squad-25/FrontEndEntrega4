@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import CurriculoService from '../services/CurriculoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class UpdateCurriculoComponent extends Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class UpdateCurriculoComponent extends Component {
     }
 
     componentDidMount(){
-        CurriculoService.getCurriculoById(this.state.id).then( (res) =>{
+        api.getCurriculoById(this.state.id).then( (res) =>{
             let curriculo = res.data;
             this.setState({
                 nome: curriculo.nome,
@@ -51,7 +52,7 @@ class UpdateCurriculoComponent extends Component {
         let curriculo = {nome: this.state.nome, sobrenome: this.state.sobrenome, nomeSocial: this.state.nomeSocial,  orientacaoSexual: this.state.orientacaoSexual,  identidadeGenero: this.state.identidadeGenero,  telefone: this.state.telefone,  cpf: this.state.cpf,  rg: this.state.rg, dataNascimento: this.state.dataNascimento};
         console.log('curriculo => ' + JSON.stringify(curriculo));
         console.log('id => ' + JSON.stringify(this.state.id));
-        CurriculoService.updateCurriculo(curriculo, this.state.id).then( res => {
+        api.updateCurriculo(curriculo, this.state.id).then( res => {
             this.props.history.push('/curriculo');
         });
     }

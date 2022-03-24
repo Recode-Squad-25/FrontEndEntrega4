@@ -1,23 +1,6 @@
-import React, { Component } from 'react';
-import ExperienciaService from '../services/ExperienciaService'
+import React from 'react';
 
-class ViewExperienciaComponent extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            id: this.props.match.params.id,
-            experiencia: {}
-        }
-    }
-
-    componentDidMount(){
-        ExperienciaService.getExperienciaById(this.state.id).then( res => {
-            this.setState({experiencia: res.data});
-        })
-    }
-
-    render() {
+export const DetalheExperiencia = () =>{
         return (
             <div>
                 <br></br>
@@ -54,6 +37,3 @@ class ViewExperienciaComponent extends Component {
             </div>
         )
     }
-}
-
-export default ViewExperienciaComponent;

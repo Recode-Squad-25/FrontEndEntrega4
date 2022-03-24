@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import CurriculoService from '../services/CurriculoService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class CurriculoComponent extends Component {
     constructor(props){
@@ -13,7 +14,7 @@ class CurriculoComponent extends Component {
     }
 
     deleteCurriculo(id){
-        CurriculoService.deleteCurriculo(id).then( res => {
+        api.deleteCurriculo(id).then( res => {
             this.setState({curriculo: this.state.curriculo.filter(curriculo => curriculo.id !== id)});
         });
     }
@@ -25,7 +26,7 @@ class CurriculoComponent extends Component {
     }
 
     componentDidMount(){
-        CurriculoService.getCurriculo().then((res) => {
+        api.getCurriculo().then((res) => {
             this.setState({ curriculo: res.data});
         });
     }

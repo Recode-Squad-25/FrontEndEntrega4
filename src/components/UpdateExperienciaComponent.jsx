@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ExperienciaService from '../services/ExperienciaService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class UpdateExperienciaComponent extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ class UpdateExperienciaComponent extends Component {
     }
 
     componentDidMount(){
-        ExperienciaService.getExperienciaById(this.state.id).then( (res) =>{
+        api.getExperienciaById(this.state.id).then( (res) =>{
             let experiencia = res.data;
             this.setState({
                 titulo: experiencia.titulo,
@@ -42,7 +43,7 @@ class UpdateExperienciaComponent extends Component {
         let experiencia = {titulo: this.state.titulo, cargo: this.state.cargo, empresa: this.state.empresa, dataInicio: this.state.dataInicio, dataFim: this.state.dataFim, descricaoAtividades: this.state.descricaoAtividades};
         console.log('experiencia => ' + JSON.stringify(experiencia));
         console.log('id => ' + JSON.stringify(this.state.id));
-        ExperienciaService.updateExperiencia(experiencia, this.state.id).then( res => {
+        api.updateExperiencia(experiencia, this.state.id).then( res => {
             this.props.history.push('/experiencias');
         });
     }

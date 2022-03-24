@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import RequisitosService from '../services/RequisitosService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class CreateRequisitosComponent extends Component {
     constructor(props) {
@@ -25,7 +26,7 @@ class CreateRequisitosComponent extends Component {
         if(this.state.id === '_add'){
             return
         }else{
-            RequisitosService.getRequisitosById(this.state.id).then( (res) =>{
+            api.getRequisitosById(this.state.id).then( (res) =>{
                 let requisitos = res.data;
                 this.setState({
                     areaAtuacao: requisitos.areaAtuacao,
@@ -44,11 +45,11 @@ class CreateRequisitosComponent extends Component {
         console.log('requisitos => ' + JSON.stringify(requisitos));
 
         if(this.state.id === '_add'){
-            RequisitosService.createRequisitos(requisitos).then(res =>{
+            api.createRequisitos(requisitos).then(res =>{
                 this.props.history.push('/requisitos');
             });
         }else{
-            RequisitosService.updateRequisitos(requisitos, this.state.id).then( res => {
+            api.updateRequisitos(requisitos, this.state.id).then( res => {
                 this.props.history.push('/requisitos');
             });
         }

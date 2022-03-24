@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import HabilidadesService from '../services/HabilidadesService';
+import { useEffect, useState } from "react";
+import api from '../services/api';
 
 class CreateHabilidadesComponent extends Component {
     constructor(props) {
@@ -25,7 +26,7 @@ class CreateHabilidadesComponent extends Component {
         if(this.state.id === '_add'){
             return
         }else{
-            HabilidadesService.getHabilidadesById(this.state.id).then( (res) =>{
+            api.getHabilidadesById(this.state.id).then( (res) =>{
                 let habilidades = res.data;
                 this.setState({
                     tipo: habilidades.tipo,
@@ -43,11 +44,11 @@ class CreateHabilidadesComponent extends Component {
         console.log('habilidades => ' + JSON.stringify(habilidades));
 
         if(this.state.id === '_add'){
-            HabilidadesService.createHabilidades(habilidades).then(res =>{
+            api.createHabilidades(habilidades).then(res =>{
                 this.props.history.push('/habilidades');
             });
         }else{
-            HabilidadesService.updateHabilidades(habilidades, this.state.id).then( res => {
+            api.updateHabilidades(habilidades, this.state.id).then( res => {
                 this.props.history.push('/habilidades');
             });
         }
