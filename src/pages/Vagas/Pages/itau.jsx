@@ -33,7 +33,7 @@ export const Itau= () => {
                             <p>Salário: 3200.00R$ <br /> + Vale Transporte <br /> + Vale Alimentação</p>
                             
                             <hr />
-                            <button class="btn btn-primary vagas-btn" type="submit"><a href="/cadastro">Cadastre-Se</a></button>
+                            <button className="btn btn-primary vagas-btn" type="submit"><a href="/cadastro">Cadastre-Se</a></button>
                             <br />
                         </h4>
                     </div>
