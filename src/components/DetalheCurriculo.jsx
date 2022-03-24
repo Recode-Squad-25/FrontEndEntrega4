@@ -3,51 +3,55 @@ import { useEffect, useState } from "react";
 import api from '../services/api';
 
 export const DetalheCurriculo = () => {
-            return (
-            <div>
-                <br></br>
-                <div className = "card col-md-6 offset-md-3">
-                    <h3 className = "text-center"> Detalhes Curriculo</h3>
-                    <div className = "card-body">
-                        <div className = "row">
-                            <label> Nome: </label>
-                            <div> { this.state.curriculo.nome }</div>
+    const [curriculos, setCurriculo] = useState([])
+
+    useEffect(() => {
+        api.get('Curriculo').then(response => {
+            setCurriculo(response.data);
+        })
+    }, []);
+    return (
+        <div className='container'>
+            <br /><br /><br /><br />
+            {curriculos.map(curriculo => (
+                <div className="card col-md-6 offset-md-3 text-light">
+                    <h3 className="text-center"> Detalhe Curriculo</h3>
+                    <div className="card-body">
+                        <div className="row">
+                            <label> Nome: {curriculo.nome}</label>
                         </div>
-                        <div className = "row">
-                            <label> Sobrenome: </label>
-                            <div> { this.state.curriculo.sobrenome }</div>
+                        <div className="row">
+                            <label> Sobrenome: {curriculo.sobrenome}</label>
                         </div>
-                        <div className = "row">
-                            <label> Nome Social: </label>
-                            <div> { this.state.curriculo.nomeSocial }</div>
+                        <div className="row">
+                            <label> Nome Social: {curriculo.nomeSocial}</label>
                         </div>
-                        <div className = "row">
-                            <label> Orientaçãoo Sexual: </label>
-                            <div> { this.state.curriculo.orientacaoSexual }</div>
+                        <div className="row">
+                            <label> Orientaçãoo Sexual: {curriculo.orientacaoSexual}</label>
                         </div>
-                        <div className = "row">
-                            <label> Identidade de Gênero: </label>
-                            <div> { this.state.curriculo.identidadeGenero }</div>
+                        <div className="row">
+                            <label> Identidade de Gênero: {curriculo.identidadeGenero}</label>
                         </div>
-                        <div className = "row">
-                            <label> Telefone: </label>
-                            <div> { this.state.curriculo.telefone }</div>
+                        <div className="row">
+                            <label> Telefone: {curriculo.telefone}</label>
                         </div>
-                        <div className = "row">
-                            <label> CPF: </label>
-                            <div> { this.state.curriculo.cpf }</div>
+                        <div className="row">
+                            <label> CPF: {curriculo.cpf}</label>
                         </div>
-                        <div className = "row">
-                            <label> RG: </label>
-                            <div> { this.state.curriculo.rg }</div>
+                        <div className="row">
+                            <label> RG: {curriculo.rg}</label>
                         </div>
-                        <div className = "row">
-                            <label> Data Nascimento: </label>
-                            <div> { this.state.curriculo.dataNascimento }</div>
+                        <div className="row">
+                            <label> Data Nascimento: {curriculo.dataNascimento}</label>
+                        </div>
+                        <div className="row">
+                            <div className="col"><button className='btn btn-outline-warning'>Editar</button></div>
+                            <div className="col"><button className='btn btn-outline-danger'>Deletar</button></div>
+                            <div className="col"><button className='btn btn-outline-success'>Salvar</button></div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-        )
-    }
+            ))}
+        </div>
+    )
+}

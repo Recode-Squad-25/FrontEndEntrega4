@@ -2,7 +2,7 @@ import foto from '../images/vagas/1.png';
 import { useEffect, useState } from "react";
 import api from '../services/api';
 import '../styles/vagas.css';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 
 export const DetalheVaga = () => { 
     const [vaga, setVaga] = useState([]);

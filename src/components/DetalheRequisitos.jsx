@@ -1,38 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useEffect, useState } from "react";
 import api from '../services/api';
 
-
 export const DetalheRequisitos = () => {
+    const [requisitos, setRequisitos] = useState([])
+
+    useEffect(() => {
+        api.get('/Requisitos').then(response => {
+            setRequisitos(response.data);
+        })
+    }, []);
+
     return (
-        <div>
-            <br></br>
-            <div className="card col-md-6 offset-md-3">
-                <h3 className="text-center"> Detalhes requisitos</h3>
+        <div className='container'>
+            <br /><br /><br /><br />
+            {requisitos.map(requisito => (
+            <div className="card col-md-6 offset-md-3 text-light">
+                <h3 className="text-center"> Detalhe requisitos</h3>
                 <div className="card-body">
                     <div className="row">
-                        <label> Área Atuação: </label>
-                        <div> {this.state.requisitos.areaAtuacao}</div>
+                        <label> Área Atuação: {requisito.areaAtuacao}</label>
                     </div>
                     <div className="row">
-                        <label> Cargo: </label>
-                        <div> {this.state.requisitos.cargo}</div>
+                        <label> Cargo: {requisito.cargo}</label>
                     </div>
                     <div className="row">
-                        <label> Tempo Experiencia: </label>
-                        <div> {this.state.requisitos.tempoExperiencia}</div>
+                        <label> Tempo Experiencia: {requisito.tempoExperiencia}</label>
                     </div>
                     <div className="row">
-                        <label> Escolaridade: </label>
-                        <div> {this.state.requisitos.escolaridade}</div>
+                        <label> Escolaridade: {requisito.escolaridade}</label>
                     </div>
                     <div className="row">
-                        <label> Habilidades: </label>
-                        <div> {this.state.requisitos.habilidades}</div>
+                        <label> Requisitos: {requisito.requisitos}</label>
+                    </div>
+                    <div className="row">
+                        <div className="col"><button className='btn btn-outline-warning'>Editar</button></div>
+                        <div className="col"><button className='btn btn-outline-danger'>Deletar</button></div>
+                        <div className="col"><button className='btn btn-outline-success'>Salvar</button></div>
                     </div>
                 </div>
-
             </div>
+            ))}
         </div>
     )
 }
