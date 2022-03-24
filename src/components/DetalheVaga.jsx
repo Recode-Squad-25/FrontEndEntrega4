@@ -6,13 +6,19 @@ import { useParams } from 'react-router-dom';
 
 export const DetalheVaga = () => { 
     const [vaga, setVaga] = useState([]);
-
+/*
     var { id } = useParams();    
     var splits = {id}.split('/');
     var vagaId = splits[splits.length-1];
 
     useEffect(() => {
         api.get('Vaga/'+vagaId).then(response => {
+            setVaga(response.data);
+        })
+    }); */
+
+    useEffect(() => {
+        api.get('Vaga/4').then(response => {
             setVaga(response.data);
         })
     }); 
