@@ -8,7 +8,7 @@ export const CardVagas = () => {
       const [vagas, setVagas] = useState([])
 
       useEffect(() => {
-        api.get('/Vaga').then(response => {
+        api.get('/vagas').then(response => {
             setVagas(response.data);
         })
     }, []);
@@ -25,7 +25,7 @@ export const CardVagas = () => {
                                 <h5 className="card-title">{vaga.titulo}  </h5>
                                 <p className="card-text"> {vaga.cargo} - Salario: R$ {vaga.salario}</p>
                                 <p className="card-text"> Beneficios: {vaga.beneficios} </p>                                
-                                <Link to={'vaga/'+vaga.id} className="btn btn-outline-warning vagas-btn">Detalhes</Link>                                
+                                <Link to={"vaga/"+vaga.id} className="btn btn-outline-warning vagas-btn">Detalhes</Link>                                
                             </div>
                         </div>
                     </div>

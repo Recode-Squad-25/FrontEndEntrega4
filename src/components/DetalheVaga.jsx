@@ -2,13 +2,13 @@ import foto from '../images/vagas/1.png';
 import { useEffect, useState } from "react";
 import api from '../services/api';
 import '../styles/vagas.css';
-//import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export const DetalheVaga = () => { 
     const [vaga, setVaga] = useState([]);
-/*
+
     var { id } = useParams();    
-    var splits = {id}.split('/');
+   /* var splits = {id}.split('/');
     var vagaId = splits[splits.length-1];
 
     useEffect(() => {
@@ -18,11 +18,10 @@ export const DetalheVaga = () => {
     }); */
 
     useEffect(() => {
-        api.get('Vaga/4').then(response => {
+        api.get({id}).then(response => {
             setVaga(response.data);
         })
-    }); 
-     
+    });      
 
     return (
         <div classNameName='container'>

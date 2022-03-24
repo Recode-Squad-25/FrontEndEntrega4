@@ -2,8 +2,8 @@ import React from 'react'
 import logo from '../images/geral/logo.png'
 import '../styles/navbar.css'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 
 const Navbar = () => {
@@ -13,7 +13,8 @@ const Navbar = () => {
                 <div className='container'>
                     <Link exact to="/" className="navbar-brand" href="/#"><img className='logo' src={logo} alt='logo eurotrip' /></Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <FontAwesomeIcon icon={faBars} style={{ color: '#fff' }} />
+                        {//<FontAwesomeIcon icon={faBars} style={{ color: '#fff' }} />
+                        }
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto">
