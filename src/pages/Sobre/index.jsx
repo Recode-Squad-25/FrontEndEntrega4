@@ -66,16 +66,16 @@ const Sobre = () => {
         </div>
         <div className='container-mae-time-ajuste1'>
           <div className='text-center container-mae-time-ajuste'>
-            <div className="d-block d-md-flex text-center col-12">
+            <div className="d-block d-md-flex text-center col-8">
               <Card FotoPessoa={Ana} NomePessoa="Ana Patrícia" funcao="Full-stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
               <Card FotoPessoa={Joao} NomePessoa="João Victor" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/ssjoao2021/" Github="https://github.com/devictor4" Instagram="https://www.instagram.com/joaovtss99/" />
               <Card FotoPessoa={Juliana} NomePessoa="Juliana Mesquita" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/juliana-maria-de-sousa-mesquita/" Github="https://github.com/JulianaMariaSousaMesquita" Instagram="https://www.instagram.com/julianamesquitaoficial/" />
             </div>
           </div>
           <div className='text-center container-mae-time-ajuste'>
-            <div className="d-block d-md-flex text-center col-12">
+            <div className="d-block d-md-flex text-center teste col-8">
               <Card FotoPessoa={Leonardo} NomePessoa="Leonardo Mendonça" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/leonardoalvesm/" Github="https://github.com/LeonardFLY" Instagram="https://www.instagram.com/leonard_fly/" />
-              <Card FotoPessoa={Luiz} NomePessoa="Luiz Henrique" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/patricia-brandao-dev/" Github="https://github.com/BrandaoSt" Instagram="https://www.instagram.com/patriciabrandao7/" />
+              <Card FotoPessoa={Luiz} NomePessoa="Luiz Henrique" funcao="Full-Stack" Github="https://github.com/BrandaoSt" />
               <Card FotoPessoa={Wesley} NomePessoa="Wesley Azevedo" funcao="Full-Stack" Linkedin="https://www.linkedin.com/in/wesley-de-azevedo/" Github="https://github.com/wesleyazevedo957" Instagram="https://www.instagram.com/wesley.azevedo.rj/" />
             </div>
           </div>

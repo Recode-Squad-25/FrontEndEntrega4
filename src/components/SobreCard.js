@@ -9,12 +9,12 @@ const SobreCard = (props) =>{
 <div className="col-md-4">
 
     <div className="rounded social">
-        <img src={props.FotoPessoa} className="img-fluid rounded-circle my-3 img-thumbnail " alt={"Foto de rosto de " + props.NomePessoa}/>
+        <img src={props.FotoPessoa} className="img-fluid rounded-circle img-thumbnail " alt={"Foto de rosto de " + props.NomePessoa}/>
         <div className="dados">
             <h5 className="mb-0 ">{props.NomePessoa}</h5>
             <span className="small text-uppercase container-mae-spantext">Fundador e {props.funcao}</span>
         </div>
-        <div className="align-items-center p-1 container-mae-icons">
+        <div className="align-items-center container-mae-icons">
             <ul className="list-inline">
                 <li className="list-inline-item">
                     <a href={props.Linkedin} className="social-link">
